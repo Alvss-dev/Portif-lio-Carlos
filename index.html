@@ -24,24 +24,55 @@
             </button>
             
         </header>
-            <section class="hero-section">
-                <div class="hero-content">
-                    <h1>SEU IMÓVEL<br>NO MELHOR ÂNGULO</h1>
-                    <button class="tag">
-                        Ideal Para Venda ou Locação
-                        <span class="icon">↓</span>
+        <main class="hero-section">
+            <aside class="hero-content">
+                <h1>SEU IMÓVEL <br>NO MELHOR ÂNGULO</h1>
+
+                <p class="descricao">Valorizamos seu imóvel com imagens profissionais que encantam e vendem mais rápido, <br> ideal para venda ou locações.</p>
+
+                <div class="botoes">
+                    <button class="button1 botaoEfeito">
+                        ORÇAMENTO
+                        <span class="circulo"></span>
+                    </button>
+
+                    <button class="button2 botaoEfeito">
+                        PORTFÓLIO
+                        <span class="circulo"></span>
                     </button>
                 </div>
-            </section>
-        <button>ORÇAMENTO</button>
-        <button>PORTFÓLIO</button>
+            </aside>
+
+            <div class="botton">
+                <button class="botao-below">
+                    <img src="src/assets/images/icon-hero-below.png">
+            </button>
+            </div>
+        </main>
     </section>
 
     <section id="sobre" class="about-section">
-        <div class="about-content">
-            <h2>Imagens Que Despertam  Emoções <br> e Fecham Negócios.</h2>
-            <p>Descrição...</p>
-        </div>
+        <section class="about-section">
+            <div class="about-reel">
+            </div>
+        </section>
+        <section id="Apresentação" class="about-apresentaç">
+            <div class="container">
+                <div class="foto">
+                    <img src="src/assets/images/Photo-carlos.svg" alt="Carlos Apresentação">
+                </div>
+                <div class="texto">
+                    <span class="tag">Apresentação</span>
+                    <h2>Olá Eu sou Carlos.</h2>
+                    <p>
+                        Fotógrafo especializado em imóveis, ajudo a valorizar espaços com imagens que encantam e geram resultados.
+                        Com olhar técnico e criativo, transformo cada ambiente em uma oportunidade de venda ou locação.
+                    </p>
+                    <a href="#">Saiba mais →</a>
+                </div>
+            </div>
+            
+        </section>
     </section>
 
     <section id="portfolio" class="portfolio-section">...</section>
@@ -53,4 +84,22 @@
     <footer id="footer" class="footer">...</footer>
     
 </body>
-</html>
+</html>  
+
+<script>
+  let botoes = document.querySelectorAll(".botaoEfeito");
+
+  botoes.forEach((botao) => {
+    let circulo = botao.querySelector(".circulo");
+
+    botao.addEventListener("mousemove", function (e) {
+      let distanciaBotao = this.getBoundingClientRect();
+
+      let x = e.clientX - distanciaBotao.left;
+      let y = e.clientY - distanciaBotao.top;
+
+      circulo.style.top = `${y}px`;
+      circulo.style.left = `${x}px`;
+    });
+  });
+</script>

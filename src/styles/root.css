@@ -165,32 +165,81 @@ aside > p {
 }
 /*SEÇÃO 2 ABAIXO ------------------ */
 .about-section {
-    width: 100%;
-    height: 100vh;
-    background-size: cover;
-    background-repeat: no-repeat;
-
-    display: flex;
-    justify-content: end;
-    align-items: center;
+  width: 100%;
+  height: auto; 
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.about-apresentação{
-
-     background-color: #ffffff; /* cor de fundo suave */
-     padding: 80px 20px;
-     font-family: 'Arial', sans-serif;
+.about-apresentacao {
+  background-color: #ffffff;
+  padding: 80px 20px;
+  font-family: 'Arial', sans-serif;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
 }
 
 .about-apresentacao .container {
-    
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 60px;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 
-eu nn aguento maaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaais,
+.texto button{
+
+  background-color: #C9A96E;
+  color: #ffffff;
+  width: 211px;
+  height: 59px;
+  border-radius: 32px;
+  margin-top: 19px;
+}
+
+.texto section{
+
+  background-color: #C9A96E;
+  color: #ffffff;
+  width: 125px;
+  height: 25px;
+  border-radius: 30px;
+  margin-bottom: 16px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+a {
+  text-decoration: none; /* Remove o sublinhado */
+  color: inherit;         /* Herda a cor do texto do elemento pai */
+}
+
+.foto img{
+  border-radius: 30px;
+}
+
+.texto{
+
+
+
+}
+
+
+
+

@@ -17,24 +17,35 @@
     --black-color: rgba(40, 40, 40, 0.9);
 
 }
+
+.hero-section {
+    background-image: url('../assets/images/bg-hero.png');
+    background-size: cover;           /* cobre toda a área */
+    background-position: center;      /* centraliza */
+    background-repeat: no-repeat;     /* não repete */
+    min-height: 100vh;                /* ocupa a altura total da tela */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
 header{
     width: 100%;
     height: 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    padding: 0 77px;
+    padding: 0px 77px;
 }
-.hero-section {
-    background-image: url('../assets/images/bg-hero.png');
-    background-size: cover;           /* cobre toda a área */
-  background-position: center;      /* centraliza */
-  background-repeat: no-repeat;     /* não repete */
-  min-height: 100vh;                /* ocupa a altura total da tela */
-  width: 100%;
-  display: flex;
-  flex-direction: column;
+
+header > img {
+  width: 80px;
+  height: auto;
+}
+
+button > img {
+  width: 30px;
+  height: auto;
 }
 
 nav{
@@ -52,9 +63,9 @@ aside {
   flex-direction: column;
   gap: 20px; /* espaço entre os elementos */
   position: absolute;
-  top: 200px;
+  top: 352px;
   left: 190px;
-  color: var(--bg-color)
+  color: var(--bg-color);
   max-width: 500px;
 }
 
@@ -112,6 +123,20 @@ aside > p {
   border: 1px solid var(--bg-color);
 }
 
+.botao-below > img {
+  width: 45px;
+  height: auto;
+}
+
+.botao-below {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  width: 40px;
+  height: auto;
+}
+
 
 /* Estilo da bolha */
 .circulo {
@@ -122,7 +147,7 @@ aside > p {
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 50%;
-  transition: width 0.4s, height 0.4s;
+  transition: width 0.5s, height 0.5s;
   z-index: 0;
 }
 
@@ -132,6 +157,10 @@ aside > p {
 
 .button2 .circulo {
   background-color: rgba(255, 255, 255, 0.2); /* branco suave BOTÃO 2 */
+}
+
+.butao-below .circulo {
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 /* Hover que expande a bolha */
@@ -150,19 +179,6 @@ aside > p {
   align-items: center;
 }
 
-.botao-below > img {
-  width: 45px;
-  height: auto;
-}
-
-.botao-below {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-  width: 40px;
-  height: auto;
-}
 /*SEÇÃO 2 ABAIXO ------------------ */
 .about-section {
     width: 100%;
@@ -192,5 +208,46 @@ aside > p {
     gap: 60px;
 }
 
+/*SEÇÃO 3 ABAIXO ------------------ */
 
-eu nn aguento maaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaais,
+.carousel-hover {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.hover-item {
+  flex: 1;
+  background-size: cover;
+  background-position: center;
+  transition: flex 0.5s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 20px;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+.hover-item h2 {
+  font-size: 16px;
+  transition: font-size 0.5s ease;
+}
+
+.hover-item h3 {
+  font-size: 12px;
+  transition: font-size 0.5s ease;
+}
+
+.hover-item:hover {
+  flex: 5;
+}
+
+.hover-item:hover h2 {
+  font-size: 22px;
+}
+
+.hover-item:hover h3 {
+  font-size: 14px;
+}

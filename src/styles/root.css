@@ -14,11 +14,12 @@
 
 :root{
     --bg-color: rgba(255, 255, 255, 0.9);
-    --black-color: rgba(40, 40, 40, 0.9);
+    --black-color: rgba(40, 40, 40, 0.8);
+    --dourado-color:rgba(201,169,100.90);
 
 }
-
-.hero-section {
+/*IMG - FUNDO - HERO ------------------*/
+.hero {
     background-image: url('../assets/images/bg-hero.png');
     background-size: cover;           /* cobre toda a área */
     background-position: center;      /* centraliza */
@@ -29,6 +30,7 @@
     flex-direction: column;
 }
 
+/*HEADER - HERO ------------------*/
 header{
     width: 100%;
     height: 100px;
@@ -36,6 +38,9 @@ header{
     justify-content: space-between;
     align-items: center;
     padding: 0px 77px;
+    background-color: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
 }
 
 header > img {
@@ -50,14 +55,15 @@ button > img {
 
 nav{
     display: flex;
-    gap: 10px;
+    gap: 35px;
 }
 
 nav > a {
     color: var(--bg-color);
-    font-size: 12px;
+    font-size: 18px;
 }
 
+/*MAIN - HERO ------------------*/
 aside {
   display: flex;
   flex-direction: column;
@@ -76,10 +82,10 @@ aside {
 }
 
 aside > h1 {
-  font-size: 52px;
+  font-size: 72px;
   font-weight: 700;
   line-height: 1.2;
-  color: white;
+  color: var(--bg-color);
   margin: 0 0 -20px 0;
 }
 
@@ -112,7 +118,7 @@ aside > p {
 }
 
 .botoes .button1 {
-  background-color: white;
+  background-color: var(--bg-color);
   color: var(--black-color);
   border: none;
 }
@@ -179,7 +185,7 @@ aside > p {
   align-items: center;
 }
 
-/*SEÇÃO 2 ABAIXO ------------------ */
+/*TELA 2 - SOBRE ------------------*/
 .about-section {
   width: 100%;
   height: auto; 
@@ -192,9 +198,8 @@ aside > p {
 }
 
 .about-apresentacao {
-  background-color: #ffffff;
+  background-color: var(--bg-color);
   padding: 80px 20px;
-  font-family: 'Arial', sans-serif;
   width: 100%;
   height: 100vh;
   display: flex;
@@ -217,18 +222,18 @@ aside > p {
 
 .texto button{
 
-  background-color: #C9A96E;
-  color: #ffffff;
+  background-color: var(--dourado-color);
+  color: var(--bg-color);
   width: 211px;
   height: 59px;
-  border-radius: 32px;
+  border-radius: 30px;
   margin-top: 19px;
 }
 
 .texto section{
 
-  background-color: #C9A96E;
-  color: #ffffff;
+  background-color: var(--dourado-color);
+  color: var(--bg-color);
   width: 125px;
   height: 25px;
   border-radius: 30px;
@@ -249,15 +254,94 @@ a {
   border-radius: 30px;
 }
 
+
+/*TELA 3 - PORTFOLIO ------------------ */
+
+.carousel-hover {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  
+}
+
+.hover-item {
+  flex: 1;
+  background-size: cover;
+  background-position: center;
+  transition: flex 0.5s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 20px;
+  color: var(--bg-color);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+
+}
+
+.hover-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px); 
+ background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.5),   /* embaixo */
+    rgba(0, 0, 0, 0.1),   /* Meio */
+    rgba(0, 0, 0, 0)      /* topo*/
+  );  z-index: 1;
+  pointer-events: none;
+}
+
+.hover-item {
+  position: relative; /* necessário para posicionar o ::before */
+  z-index: 0;
+}
+
+.hover-item > * {
+  position: relative;
+  z-index: 2; /* para garantir que o texto fique acima do blur */
+}
+.hover-item h2 {
+  font-size: 18px;
+  transition: font-size 0.5s ease;
+  font-weight: 400;
+}
+
+.hover-item h3 {
+  font-size: 12px;
+  transition: font-size 0.5s ease;
+  font-weight: 400;
+
+}
+
+.hover-item:hover {
+  flex: 5;
+}
+
+.hover-item:hover h2 {
+  font-size: 22px;
+}
+
+.hover-item:hover h3 {
+  font-size: 14px;
+}
+
+
+/*TELA 4 - PROCESSO ------------------*/
+
 .processo {
   margin: 0;
-  font-family: 'Arial', sans-serif;
-  background-color: #f5f5f5;
+  background-color: var(--bg-color);
   color: #333;
   max-width: 100%;
   height: 850px;
   margin: 0 auto;
-  padding: 40px 20px;
+  padding: 45px 20px;
   text-align: center;
 }
 
@@ -274,7 +358,7 @@ a {
   background-color: #eee;
   display: inline-block;
   padding: 10px 20px;
-  border-radius: 20px;
+  border-radius: 30px;
 }
 
 .etapas {
@@ -288,10 +372,10 @@ a {
 }
 
 .etapa {
-  background-color: #444;
-  color: white;
+  background-color: var(--black-color);
+  color: var(--bg-color);
   padding: 45px 20px 32px; /* mais espaço interno, especialmente abaixo */
-  border-radius: 16px;
+  border-radius: 30px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.05);
   text-align: left;
   width: 100%;
@@ -305,31 +389,33 @@ a {
 }
 
 .etapa p {
-  font-size: 13px;
+  font-size: 12px;
   line-height: 1.4;
   margin-bottom: 15px; /* novo: cria espaço antes do botão */
 }
 
 .seta {
-  font-size: 18px;
+  font-size: 12px;
   display: block;
   text-align: right;
   margin-top: 8px;
 }
 
 .btn {
-  background-color: #c6a876;
+  background-color: var(--dourado-color);
   border: none;
-  padding: 8px 16px;
-  border-radius: 10px;
+  padding: 4px 16px;
+  border-radius: 30px;
   cursor: pointer;
-  font-weight: bold;
+  font-weight: 400;
+  font-size: 12px;
+  
 }
 
 .imagem {
   width: 100%;
   height: auto;
-  border-radius: 20px;
+  border-radius: 30px;
   object-fit: cover;
   box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
@@ -417,6 +503,159 @@ a {
   font-size: 14px;
 }
 
+/* TELA 5 - PLANOS ------------------*/
 
+.portfolio-section {
+    background-color: var(--black-color); /* rgba(40, 40, 40, 0.9) */
+    color: #f0f0f0; /* Default text color for this section */
+    padding: 300px 70px 70PX; /* Padding for the section content */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; /* Ensure it takes full width */
+    border-radius: 30PX 30PX 0 0;
+}
 
+/* Main Heading for Plans Section */
+.plans-main-heading {
+    font-size: 2.5em;
+    color: #FFFFFF;
+    margin-bottom: 40px;
+    text-align: center;
+}
 
+/* Plans Container */
+.plans-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow cards to wrap on smaller screens */
+    justify-content: center;
+    gap: 30px; /* Space between cards */
+    max-width: 1700px; /* Max width to contain cards */
+    width: 100%;
+}
+
+/* Individual Card Styles */
+.plan-card {
+    width: 396px;
+    height: 570px;
+    background-color: #4B4B4B; /* Standard card background */
+    border-radius: 30px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative; /* For recommended tag */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    color: #f0f0f0; /* Ensure text inside cards is light */
+}
+
+.plan-card.recommended {
+    background-color: #3E3E3E; /* Darker background for recommended card */
+}
+
+.recommended-tag {
+    position: absolute;
+    top: -15px; /* Position above the card */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--dourado-color); /* Gold/Amber color */
+    color: #1F2937; /* Dark text */
+    padding: 8px 15px;
+    border-radius: 30px;
+    font-size: 0.85em;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.plan-title {
+    font-size: 1.8em;
+    color: #FFFFFF;
+    margin-bottom: 10px; /* Space below title */
+    font-weight: 600;
+}
+
+.plan-card .custom-description-top {
+    font-size: 0.9em;
+    color: #D0D0D0;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.features-list {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0; /* Space around features list */
+    flex-grow: 1; /* Allow list to take available space */
+}
+
+.features-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    font-size: 0.95em;
+    color: #E0E0E0; /* Slightly lighter text for features */
+}
+
+.features-list .icon {
+    margin-right: 10px;
+    font-size: 1.2em;
+    width: 20px; /* Ensure alignment */
+    text-align: center;
+}
+
+.features-list .icon.check {
+    color: #22c55e; /* Green for checkmark */
+}
+
+.features-list .icon.cross {
+    color: #ef4444; /* Red for cross */
+}
+
+.plan-price {
+    font-size: 2em; /* Larger price */
+    color: #FFFFFF;
+    font-weight: bold;
+    margin-top: 15px; /* Space above price */
+    margin-bottom: 10px;
+}
+
+.plan-description {
+    font-size: 0.85em;
+    color: #B0B0B0; /* Dimmer white for description */
+    line-height: 1.4;
+    margin-bottom: 20px; /* Space before button */
+    min-height: 50px; /* Ensure consistent spacing if description length varies */
+}
+
+.plan-card .card-footer {
+     margin-top: auto; /* Pushes footer to bottom */
+}
+
+.btn-contract {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: #E0E0E0; /* Light gray button */
+    color: #1F2937; /* Dark text for button */
+    border: none;
+    border-radius: 30px;
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px; /* Space above button */
+}
+
+.btn-contract:hover {
+    background-color: #C0C0C0; /* Slightly darker on hover */
+}
+
+/* Specific styles for "Plano sob Medida" button if it's the only element in footer */
+.plan-card.custom-plan .card-footer {
+    margin-top: 20px; /* Adjust if needed */
+}
+.plan-card.custom-plan .btn-contract {
+    margin-top: 0; /* Reset margin if it's the only element */
+}

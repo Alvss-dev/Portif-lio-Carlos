@@ -18,6 +18,10 @@
     --dourado-color:rgba(201,169,100.90);
 
 }
+
+body {
+  background-color: #282828;
+}
 /*IMG - FUNDO - HERO ------------------*/
 .hero {
     background-image: url('../assets/images/bg-hero.png');
@@ -336,13 +340,14 @@ a {
 
 .processo {
   margin: 0;
-  background-color: var(--bg-color);
+  background-color: #EDEDED;
   color: #333;
   max-width: 100%;
   height: 850px;
   margin: 0 auto;
   padding: 45px 20px;
   text-align: center;
+  border-radius: 30PX 30PX 0 0;
 }
 
 .processo h1 {
@@ -506,9 +511,9 @@ a {
 /* TELA 5 - PLANOS ------------------*/
 
 .portfolio-section {
-    background-color: var(--black-color); /* rgba(40, 40, 40, 0.9) */
+    background-color: #282828; /* rgba(40, 40, 40, 0.9) */
     color: #f0f0f0; /* Default text color for this section */
-    padding: 300px 70px 70PX; /* Padding for the section content */
+    padding: 138px 80px 70px 70PX; /* Padding for the section content */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -518,11 +523,16 @@ a {
 
 /* Main Heading for Plans Section */
 .plans-main-heading {
-    font-size: 2.5em;
+    font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 10px;
     color: #FFFFFF;
-    margin-bottom: 40px;
-    text-align: center;
-}
+    margin-bottom: 80px;
+    text-align: left;
+    display: flex;
+    justify-content: left;
+    
+  }
 
 /* Plans Container */
 .plans-container {
@@ -536,7 +546,7 @@ a {
 
 /* Individual Card Styles */
 .plan-card {
-    width: 396px;
+    width: 360px;
     height: 570px;
     background-color: #4B4B4B; /* Standard card background */
     border-radius: 30px;
@@ -604,14 +614,6 @@ a {
     text-align: center;
 }
 
-.features-list .icon.check {
-    color: #22c55e; /* Green for checkmark */
-}
-
-.features-list .icon.cross {
-    color: #ef4444; /* Red for cross */
-}
-
 .plan-price {
     font-size: 2em; /* Larger price */
     color: #FFFFFF;
@@ -658,4 +660,218 @@ a {
 }
 .plan-card.custom-plan .btn-contract {
     margin-top: 0; /* Reset margin if it's the only element */
+}
+
+
+/*-- TELA 6 - ORÇAMENTO --*/
+
+.orcamento-section {
+  background-color: #282828;
+  padding: 0 54px;
+  margin-bottom: 100px;
+  position: relative;
+}
+
+.orcamento-container {
+  background-color: #C8C8C8;
+  width: 100%;
+  max-width: 1812px;
+  height: 792px;
+  margin: 0 auto;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+}
+
+.orcamento-bg {
+    background-color: #282828;
+    padding: 20px;
+    border: red solid;;
+
+}
+
+.orcamento-wrapper {
+  background-color: #0F0F0F;
+  position: absolute;
+  top: 396px; /* metade da altura de 792px */
+  left: 20px;
+  right: 20px;
+  height: 1256px;
+  z-index: 1;
+  border-radius: 20px;
+}
+
+
+.orcamento-bloco {
+  display: flex;
+  gap: 40px;
+  padding: 40px;
+}
+
+.orcamento-imagem {
+  width: 736px;
+  height: 641px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.orcamento-conteudo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #0F0F0F;
+  max-width: 900px;
+}
+
+.etiqueta {
+  background-color: #fff;
+  color: #000;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+.titulo {
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+
+.descricao {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.botao-personalizado {
+  background-color: #0F0F0F;
+  color: #fff;
+  font-weight: bold;
+  padding: 14px 24px;
+  border: none;
+  border-radius: 8px;
+  margin-bottom: 40px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.botao-personalizado:hover {
+  background-color: #1e1e1e;
+}
+
+.orcamento-numeros {
+  display: flex;
+  gap: 60px;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.orcamento-numeros strong {
+  display: block;
+  font-size: 2rem;
+  color: #0F0F0F;
+}
+
+/*-- TELA 7 - FOOTER --*/
+
+.footer {
+  background-color: #0F0F0F;
+  color: #fff;
+  padding: 450px 54px 40px 54px;
+  border-radius: 30px ;
+  
+}
+
+.footer-container {
+  max-width: 1812px;
+  margin: 0 auto;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+.footer-col h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  color: #c8c8c8;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.footer-col ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-col.social h4 {
+  margin-bottom: 16px;
+}
+
+.footer-social-icons a {
+  color: #fff;
+  font-size: 1.4rem;
+  margin-right: 15px;
+  transition: color 0.3s;
+}
+
+.footer-social-icons a:hover {
+  color: #c8c8c8;
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #333;
+  padding-top: 40px;
+}
+
+.footer-destaque {
+  font-size: 3rem;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+
+.footer-destaque span {
+  color: #fff;
+  letter-spacing: 2px;
+}
+
+.footer-info {
+  font-size: 0.9rem;
+  color: #aaa;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.footer-info a {
+  color: #aaa;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+.footer-info a:hover {
+  text-decoration: underline;
 }

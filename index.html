@@ -50,39 +50,61 @@
             </aside>
 
             <div class="botton">
-                <button class="botao-below botaoEfeito">
+                <button class="botao-below botaoEfeito" onclick="location.href='#tela-dois'">
                     <img src="src/assets/images/icon-hero-below.png">
                     <span class="circulo"></span>
             </button>
             </div>
         </main>
-    </section>
 
-<!-- TELA 2 - SOBRE -->
-    <section id="sobre" class="about-section">
-        <section class="about-section">
-            <div class="about-reel">
-            </div>
-        </section>
-        <section id="apresentacao" class="about-apresentacao">
-            <div class="container">
-                <div class="foto">
-                    <img src="src/assets/images/Photo-carlos.svg" alt="Carlos Apresentação">
+        <!-- TELA EXTRA - TEXTO + VÍDEO -->
+        
+        <section class="impacto-section" id="tela-dois">
+            <div class="impacto-container">
+                <div class="impacto-texto">
+                <span class="tag">Resultado de Impacto</span>
+                <h2>Imagens Que Despertam Emoções<br>e Fecham Negócios.</h2>
+                <div class="estatisticas">
+                    <div><strong>1.5K+</strong><br>Imóveis Capturados</div>
+                    <div><strong>2M+</strong><br>Pessoas Impactadas</div>
+                    <div><strong>45K+</strong><br>Fotos Entregues</div>
                 </div>
-                <div class="texto">
-                    <section><span class="tag">Apresentação</span></section>                    
-                    <h2>Olá, eu sou o Carlos.</h2>
-                    <p>
-                        Fotógrafo especializado em imóveis, ajudo a valorizar espaços com imagens que encantam e geram resultados.
-                        Com olhar técnico e criativo, transformo cada ambiente em uma oportunidade de venda ou locação.
-                    </p>
-                    <button type="button"><a href="#">Saiba mais →</a></button>
+                </div>
+                <div class="impacto-video">
+                <video autoplay muted loop>
+                    <source src="src/assets/videos/apresentacao.mp4" type="video/mp4">
+                    Seu navegador não suporta vídeo HTML5.
+                </video>
                 </div>
             </div>
-            
         </section>
-    </section>
-
+        
+    </section>    
+    
+    <!-- TELA 2 - SOBRE -->
+        <section id="sobre" class="about-section">
+            <section class="about-section">
+                <div class="about-reel">
+                </div>
+            </section>
+            <section id="apresentacao" class="about-apresentacao">
+                <div class="container">
+                    <div class="foto">
+                        <img src="src/assets/images/Photo-carlos.svg" alt="Carlos Apresentação">
+                    </div>
+                    <div class="texto">
+                        <section><span class="tag">Apresentação</span></section>                    
+                        <h2>Olá, eu sou o Carlos.</h2>
+                        <p>
+                            Fotógrafo especializado em imóveis, ajudo a valorizar espaços com imagens que encantam e geram resultados.
+                            Com olhar técnico e criativo, transformo cada ambiente em uma oportunidade de venda ou locação.
+                        </p>
+                        <button type="button"><a href="#">Saiba mais →</a></button>
+                    </div>
+                </div>
+                
+            </section>
+        </section>
 
 <!-- TELA 3 - PORTFOLIO -->
     <section class="carousel-hover">
@@ -263,7 +285,7 @@
             </div>
             <div class="card-footer">
                 <p class="plan-description">Ideal para quem busca uma solução visual flexível e totalmente personalizada</p>
-                <button class="btn-contract">Solicitar orçamento personalizado</button>
+                <button class="btn-contract" onclick="location.href='#orcamento'">Solicitar orçamento personalizado</button>
             </div>
         </div>
     </div>

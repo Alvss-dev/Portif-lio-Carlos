@@ -24,10 +24,10 @@ body {
 /*IMG - FUNDO - HERO ------------------*/
 .hero {
     background-image: url('../assets/images/bg-hero.png');
-    background-size: cover;           /* cobre toda a área */
-    background-position: center;      /* centraliza */
-    background-repeat: no-repeat;     /* não repete */
-    min-height: 100vh;                /* ocupa a altura total da tela */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 120vh; /* antes estava 100vh */
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -107,6 +107,103 @@ aside > p {
   display: flex;
   gap: 10px;
 }
+
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  height: 100%;
+  padding: 800px 190px 100px 190px; /* controla o espaçamento superior/inferior */
+}
+
+
+/* TELA EXTRA - TEXTO + VÍDEO ------------------ */
+.impacto-section {
+  width: 75%;
+  background-color: var(--bg-color);
+  padding: 80px 0;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  border-radius: 20px;
+  margin-left: 13%;
+  margin-top: 100px;
+  margin-bottom: 50px;
+  position: relative;
+  z-index: 10;
+}
+
+.impacto-container {
+  display: flex;
+  max-width: 1100px;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.impacto-texto {
+  flex: 1;
+  max-width: 600px;
+  color: #282828;
+}
+
+.impacto-texto .tag {
+  display: inline-block;
+  background-color: var(--dourado-color);
+  color: var(--bg-color);
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+
+.impacto-texto h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.estatisticas {
+  display: flex;
+  gap: 40px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.estatisticas strong {
+  display: block;
+  font-size: 36px;
+  color: #000;
+}
+
+.impacto-video {
+  flex: 1;
+  max-width: 600px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.impacto-video video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 20px;
+}
+
+.impacto-texto,
+.impacto-video {
+  flex: 1 1 45%;      /* ✅ cada um pega ~metade do container */
+  max-width: 500px;
+  min-width: 300px;
+}
+
+
+
 
 /* Estilos dos botões */
 .botoes .button1,
@@ -204,7 +301,7 @@ aside > p {
   background-color: var(--bg-color);
   padding: 80px 20px;
   width: 100%;
-  height: 100vh;
+  height: 650px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -359,7 +456,7 @@ a {
 .subtitulo {
   font-size: 18px;
   margin-bottom: 40px;
-  background-color: #eee;
+  background-color: rgb(212, 208, 208);
   display: inline-block;
   padding: 10px 20px;
   border-radius: 30px;

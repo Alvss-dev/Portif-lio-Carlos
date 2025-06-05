@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-/* reset css */
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');/* reset css */
 
 *{
     padding: 0;
@@ -14,7 +13,7 @@
 
 :root{
     --bg-color: rgba(255, 255, 255, 0.9);
-    --black-color: rgba(40, 40, 40, 0.8);
+    --black-color: rgba(40, 40, 40, 0.9);
     --dourado-color:rgba(201,169,100.90);
 
 }
@@ -709,6 +708,12 @@ a {
   display: flex;
   gap: 40px;
   padding: 40px;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
 }
 
 .orcamento-imagem {
@@ -727,55 +732,91 @@ a {
 }
 
 .etiqueta {
-  background-color: #fff;
-  color: #000;
-  font-size: 0.9rem;
-  font-weight: 600;
-  padding: 4px 10px;
-  border-radius: 4px;
-  margin-bottom: 10px;
-  display: inline-block;
+  background-color: var(--bg-color);
+  color: var(--black-color);
+  width: 125px;
+  height: 25px;
+  border-radius: 30px;
+  font-size: 12px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow:
+    0 0 0.8px var(--black-color),       
+    2px 2px 3px rgba(0, 0, 0, 0.25);
+    margin-left: 20px;
+
 }
 
 .titulo {
-  font-size: 2.5rem;
-  font-weight: 900;
-  margin-bottom: 20px;
+  font-size: 52px;
+  font-weight: 700;
+  margin-bottom: 0px;
+  color: var(--black-color);
+  padding-top: 10px;
+  text-shadow:
+    0 0 0.9px var(--black-color),       
+    2px 2px 3px rgba(0, 0, 0, 0.25);
+  margin-left: 20px;
 }
 
 .descricao {
-  font-size: 1.2rem;
+  font-size: 16px;
+  font-weight: 600;
   line-height: 1.6;
   margin-bottom: 30px;
+  color: var(--black-color);
+  margin-left: 20px;
+  width: 681px;
 }
 
 .botao-personalizado {
-  background-color: #0F0F0F;
-  color: #fff;
-  font-weight: bold;
+  background-color: var(--bg-color);
+  color: var(--black-color);
+  font-weight: 600;
   padding: 14px 24px;
   border: none;
-  border-radius: 8px;
   margin-bottom: 40px;
   cursor: pointer;
   transition: background 0.3s;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 28px;
+  width: 701px;
+  height: 95px;
+  box-shadow:
+    0 0 0.8px var(--black-color),       
+    2px 2px 3px rgba(0, 0, 0, 0.25);
+    margin-bottom: 82 px;
+    margin-left: 20px;
+
+  
 }
 
+
+
 .botao-personalizado:hover {
-  background-color: #1e1e1e;
+  background-color: var(--dourado-color);
 }
 
 .orcamento-numeros {
   display: flex;
-  gap: 60px;
-  font-size: 1.1rem;
+  gap: 80px;
+  font-size: 16px;
   font-weight: 600;
+  color: var(--black-color);
+  padding-left: 10px;
+  margin-top: 0 px;
+  margin-left: 20px;
+
 }
 
 .orcamento-numeros strong {
   display: block;
-  font-size: 2rem;
-  color: #0F0F0F;
+  font-size: 80px;
+  color: var(--black-color);
+  font-weight: 400;
 }
 
 /*-- TELA 7 - FOOTER --*/
@@ -783,21 +824,19 @@ a {
 .footer {
   background-color: #0F0F0F;
   color: #fff;
-  padding: 450px 54px 40px 54px;
   border-radius: 30px ;
   
 }
 
 .footer-container {
-  max-width: 1812px;
-  margin: 0 auto;
+  margin: 530px 177px 72px 177px;
 }
 
 .footer-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 40px;
-  margin-bottom: 60px;
+  margin-bottom: 100px;
 }
 
 .footer-col h4 {
@@ -840,36 +879,49 @@ a {
   color: #c8c8c8;
 }
 
-.footer-bottom {
-  text-align: center;
-  border-top: 1px solid #333;
-  padding-top: 40px;
-}
+
 
 .footer-destaque {
-  font-size: 3rem;
-  font-weight: 900;
-  margin-bottom: 20px;
+  display: flex;
+  align-items: center; /* Alinha verticalmente */
+  justify-content: center;
+  gap: 20px;
+  font-family: 'Anton', sans-serif;
+  color: var(--bg-color);
 }
 
-.footer-destaque span {
-  color: #fff;
+.footer-destaque .texto-menor {
+  font-size: 100px;
+  font-weight: 400;
+  font-family: 'Anton', sans-serif;
+
+}
+
+.footer-destaque .destaque {
+  font-size: 200px;
   letter-spacing: 2px;
+  font-family: 'Anton', sans-serif;
+  
 }
 
 .footer-info {
-  font-size: 0.9rem;
-  color: #aaa;
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 10px;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;    /* Centraliza o conteúdo na tela */
+  padding: 20px 40px; /* Espaçamento interno opcional */
+  flex-wrap: wrap;    /* Evita quebra feia em telas pequenas */
+}
+
+.footer-info p {
+  margin: 0;
 }
 
 .footer-info a {
-  color: #aaa;
+  margin-left: 10px;
   text-decoration: none;
-  margin: 0 5px;
+  color: inherit;
 }
 
 .footer-info a:hover {

@@ -23,7 +23,7 @@ body {
 }
 /*IMG - FUNDO - HERO ------------------*/
 .hero {
-    background-image: url('../assets/images/bg-hero.png');
+    background-image: url('../assets/images/bghero.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -31,6 +31,8 @@ body {
     width: 100%;
     display: flex;
     flex-direction: column;
+    position: relative;
+    z-index: 1;
 }
 
 /*HEADER - HERO ------------------*/
@@ -112,95 +114,71 @@ aside > p {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: start;
   height: 100%;
   padding: 800px 190px 100px 190px; /* controla o espaçamento superior/inferior */
 }
 
 
 /* TELA EXTRA - TEXTO + VÍDEO ------------------ */
-.impacto-section {
-  width: 75%;
-  background-color: var(--bg-color);
-  padding: 80px 0;
-  display: flex;
-  justify-content: center; 
-  align-items: center;
-  border-radius: 20px;
-  margin-left: 13%;
-  margin-top: 100px;
-  margin-bottom: 50px;
+
+.reel-about-section {
   position: relative;
-  z-index: 10;
+  z-index: 2;
+
 }
 
-.impacto-container {
-  display: flex;
-  max-width: 1100px;
+.play-reel-section {
+  background-color: #282828;
+  padding: 0 54px;
+  margin-bottom: 100px;
+  position: relative;
+}
+
+.play-reel-container {
+  background-color: #C8C8C8;
   width: 100%;
-  justify-content: space-between;
-  align-items: center;
-  gap: 60px;
-  flex-wrap: wrap;
-  margin: 0 auto;
-}
-
-.impacto-texto {
-  flex: 1;
-  max-width: 600px;
-  color: #282828;
-}
-
-.impacto-texto .tag {
-  display: inline-block;
-  background-color: var(--dourado-color);
-  color: var(--bg-color);
-  padding: 8px 16px;
+  max-width: 3000px;
+  height: 792px;
   border-radius: 20px;
-  font-size: 12px;
-  margin-bottom: 20px;
+  position: relative;
+  z-index: 2;
+  margin-bottom: 580px;
+  display: flex;
+}
+.orcamento-sobrecarlos {
+  background-color: rgba(255, 255, 255, 0.9);
+  position: absolute;
+  top: 396px; /* metade da altura de 792px */
+  left: 20px;
+  right: 20px;
+  height: 1000px;
+  z-index: 1;
+  border-radius: 20px;
+
 }
 
-.impacto-texto h2 {
-  font-size: 32px;
-  font-weight: 700;
-  margin-bottom: 30px;
-}
-
-.estatisticas {
+.play-reel {
   display: flex;
   gap: 40px;
-  font-size: 16px;
-  font-weight: 600;
-}
-
-.estatisticas strong {
-  display: block;
-  font-size: 36px;
-  color: #000;
-}
-
-.impacto-video {
-  flex: 1;
-  max-width: 600px;
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-}
-
-.impacto-video video {
+  padding: 40px;
   width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 20px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+.play-reel-section {
+  background-color: #282828;
+  padding: 0 54px;
+  margin-bottom: 100px;
+  position: relative;
 }
 
-.impacto-texto,
-.impacto-video {
-  flex: 1 1 45%;      /* ✅ cada um pega ~metade do container */
-  max-width: 500px;
-  min-width: 300px;
-}
+
+
+
+
 
 
 
@@ -298,14 +276,14 @@ aside > p {
 }
 
 .about-apresentacao {
-  background-color: var(--bg-color);
   padding: 80px 20px;
   width: 100%;
   height: 650px;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: end;
   box-sizing: border-box;
+  padding-top: 930px;
 }
 
 .about-apresentacao .container {
@@ -354,6 +332,91 @@ a {
   border-radius: 30px;
 }
 
+.impacto-section {
+  width: 75%;
+  padding: 80px 0;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  border-radius: 20px;
+  margin-left: 13%;
+  margin-top: 100px;
+  margin-bottom: 50px;
+  position: relative;
+  z-index: 10;
+}
+
+.impacto-container {
+  display: flex;
+  max-width: 1100px;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.impacto-texto {
+  flex: 1;
+  max-width: 600px;
+  color: #282828;
+}
+
+.impacto-texto .tag {
+  display: inline-block;
+  background-color: var(--dourado-color);
+  color: var(--bg-color);
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+
+.impacto-texto h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.estatisticas {
+  display: flex;
+  gap: 40px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--black-color);
+  
+}
+
+.estatisticas strong {
+  display: block;
+  font-size: 80px;
+  color: var(--black-color);
+  font-weight: 400;
+}
+
+.impacto-video {
+  flex: 1;
+  max-width: 600px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.impacto-video video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 20px;
+}
+
+.impacto-texto,
+.impacto-video {
+  flex: 1 1 45%;      /* ✅ cada um pega ~metade do container */
+  max-width: 500px;
+  min-width: 300px;
+}
+
 
 /*TELA 3 - PORTFOLIO ------------------ */
 
@@ -362,6 +425,8 @@ a {
   height: 100vh;
   width: 100%;
   overflow: hidden;
+  position: relative;
+  z-index: 3;
   
 }
 
@@ -377,6 +442,14 @@ a {
   color: var(--bg-color);
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
 
+}
+
+.hover-item:first-child {
+  border-top-left-radius: 30px;
+}
+
+.hover-item:last-child {
+  border-top-right-radius: 30px;
 }
 
 .hover-item::before {
@@ -608,13 +681,12 @@ a {
 
 .portfolio-section {
     background-color: #282828; /* rgba(40, 40, 40, 0.9) */
-    color: #f0f0f0; /* Default text color for this section */
-    padding: 138px 80px 70px 70PX; /* Padding for the section content */
+    color: #f0f0f0; 
+    padding: 138px 80px 70px 70PX;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%; /* Ensure it takes full width */
-    border-radius: 30PX 30PX 0 0;
+    width: 100%; 
 }
 
 /* Main Heading for Plans Section */
@@ -785,8 +857,6 @@ a {
 .orcamento-bg {
     background-color: #282828;
     padding: 20px;
-    border: red solid;;
-
 }
 
 .orcamento-wrapper {

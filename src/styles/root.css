@@ -1,78 +1,104 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');/* reset css */
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+/* reset css */
 
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    border: none;
-    background: none;
-    font-family: "Poppins", sans-serif;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  background: none;
+  font-family: "Poppins", sans-serif;
 }
 
-:root{
-    --bg-color: rgba(255, 255, 255, 0.9);
-    --black-color: rgba(40, 40, 40, 0.9);
-    --dourado-color:rgba(201,169,100.90);
+:root {
+  --bg-color: rgba(255, 255, 255, 0.9);
+  --black-color: rgba(40, 40, 40, 0.9);
+  --dourado-color: rgba(201, 169, 100.90);
+  --bg-dark-primary: #1a1a1a;
+  --bg-dark-secondary: #282828;
+  --text-light: #f0f0f0;
 
 }
 
 body {
   background-color: #282828;
 }
+
 /*IMG - FUNDO - HERO ------------------*/
 .hero {
-    background-image: url('../assets/images/bghero.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    min-height: 120vh; /* antes estava 100vh */
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    z-index: 1;
+  background-image: url('../assets/images/bg-hero-1-2.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: vh;
+  /* antes estava 100vh */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 3;
 }
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Fundo preto 50% transparente */
+  z-index: 1;
+}
+
+.hero>header,
+.hero>main {
+  position: relative;
+  z-index: 2;
+}
+
 
 /*HEADER - HERO ------------------*/
-header{
-    width: 100%;
-    height: 100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0px 77px;
-    background-color: rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(2px);
-    -webkit-backdrop-filter: blur(2px);
+header {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 77px;
+  background-color: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
 }
 
-header > img {
+header>img {
   width: 80px;
   height: auto;
 }
 
-button > img {
+button>img {
   width: 30px;
   height: auto;
 }
 
-nav{
-    display: flex;
-    gap: 35px;
+nav {
+  display: flex;
+  gap: 35px;
 }
 
-nav > a {
-    color: var(--bg-color);
-    font-size: 18px;
+nav>a {
+  color: var(--bg-color);
+  font-size: 18px;
 }
 
 /*MAIN - HERO ------------------*/
 aside {
   display: flex;
   flex-direction: column;
-  gap: 20px; /* espaço entre os elementos */
+  gap: 20px;
+  /* espaço entre os elementos */
   position: absolute;
   top: 352px;
   left: 190px;
@@ -80,13 +106,14 @@ aside {
   max-width: 500px;
 }
 
- aside {
-  width: fit-content; /* ou algo como 600px */
+aside {
+  width: fit-content;
+  /* ou algo como 600px */
   max-width: 100%;
   white-space: normal;
 }
 
-aside > h1 {
+aside>h1 {
   font-size: 72px;
   font-weight: 700;
   line-height: 1.2;
@@ -94,7 +121,7 @@ aside > h1 {
   margin: 0 0 -20px 0;
 }
 
-aside > p {
+aside>p {
   font-size: 16px;
   margin: 0;
 }
@@ -115,45 +142,42 @@ aside > p {
   flex-direction: column;
   justify-content: center;
   height: 100%;
-  padding: 800px 190px 100px 190px; /* controla o espaçamento superior/inferior */
+  padding: 800px 190px 100px 190px;
+  /* controla o espaçamento superior/inferior */
 }
 
 
 /* TELA EXTRA - TEXTO + VÍDEO ------------------ */
 
-.reel-about-section {
-  position: relative;
-  z-index: 2;
-
-}
-
-.play-reel-section {
-  background-color: #282828;
-  padding: 0 54px;
-  margin-bottom: 100px;
-  position: relative;
-}
 
 .play-reel-container {
   background-color: #C8C8C8;
   width: 100%;
   max-width: 3000px;
   height: 792px;
-  border-radius: 20px;
+  border-radius: 30px;
   position: relative;
   z-index: 2;
   margin-bottom: 580px;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 128px;
 }
+
 .orcamento-sobrecarlos {
   background-color: rgba(255, 255, 255, 0.9);
   position: absolute;
-  top: 396px; /* metade da altura de 792px */
+  top: 396px;
+  /* metade da altura de 792px */
   left: 20px;
   right: 20px;
   height: 1000px;
   z-index: 1;
-  border-radius: 20px;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
 }
 
@@ -168,18 +192,13 @@ aside > p {
   align-items: center;
   box-sizing: border-box;
 }
+
 .play-reel-section {
-  background-color: #282828;
   padding: 0 54px;
   margin-bottom: 100px;
   position: relative;
+
 }
-
-
-
-
-
-
 
 
 
@@ -207,7 +226,7 @@ aside > p {
   border: 1px solid var(--bg-color);
 }
 
-.botao-below > img {
+.botao-below>img {
   width: 45px;
   height: auto;
 }
@@ -236,11 +255,13 @@ aside > p {
 }
 
 .button1 .circulo {
-  background-color: rgba(0, 0, 0, 0.2); /* preto suave BOTÃO 1*/
+  background-color: rgba(0, 0, 0, 0.2);
+  /* preto suave BOTÃO 1*/
 }
 
 .button2 .circulo {
-  background-color: rgba(255, 255, 255, 0.2); /* branco suave BOTÃO 2 */
+  background-color: rgba(255, 255, 255, 0.2);
+  /* branco suave BOTÃO 2 */
 }
 
 .butao-below .circulo {
@@ -264,157 +285,251 @@ aside > p {
 }
 
 /*TELA 2 - SOBRE ------------------*/
-.about-section {
+
+
+
+/* --- CONTÊINER PRINCIPAL DA SEÇÃO --- */
+.about-section-v2 {
   width: 100%;
-  height: auto; 
-  background-size: cover;
-  background-repeat: no-repeat;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.about-apresentacao {
-  padding: 80px 20px;
-  width: 100%;
-  height: 650px;
-  display: flex;
-  justify-content: center;
-  align-items: end;
-  box-sizing: border-box;
-  padding-top: 930px;
-}
-
-.about-apresentacao .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: nowrap;
-  gap: 60px;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  box-sizing: border-box;
-}
-
-.texto button{
-
-  background-color: var(--dourado-color);
-  color: var(--bg-color);
-  width: 211px;
-  height: 59px;
-  border-radius: 30px;
-  margin-top: 19px;
-}
-
-.texto section{
-
-  background-color: var(--dourado-color);
-  color: var(--bg-color);
-  width: 125px;
-  height: 25px;
-  border-radius: 30px;
-  margin-bottom: 16px;
-  font-size: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-}
-
-a {
-  text-decoration: none; 
-  color: inherit;         
-}
-
-.foto img{
-  border-radius: 30px;
-}
-
-.impacto-section {
-  width: 75%;
-  padding: 80px 0;
-  display: flex;
-  justify-content: center; 
-  align-items: center;
-  border-radius: 20px;
-  margin-left: 13%;
-  margin-top: 100px;
-  margin-bottom: 50px;
+  max-width: 1100px;
   position: relative;
-  z-index: 10;
+
 }
 
+/* --- LAYOUT DO CONTEÚDO (FOTO + TEXTO) --- */
+.about-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding-top: 400px;
+}
+
+/* --- FOTO --- */
+.about-photo {
+  flex-shrink: 0;
+  /* Impede que a foto encolha */
+  z-index: 2;
+  /* Garante que a foto fique por cima do texto */
+}
+
+.about-photo img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* --- CAIXA DE TEXTO --- */
+.about-text {
+  background-color: var(--bg-dark-secondary);
+  border-radius: 20px;
+  padding: 40px;
+  /* Recuo para a foto sobrepor */
+  padding-left: 180px;
+  /* Margem negativa para puxar o texto para debaixo da foto */
+  margin-left: -150px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  flex-grow: 1;
+  /* Faz a caixa de texto ocupar o espaço restante */
+}
+
+/* --- ELEMENTOS DE TEXTO --- */
+.about-text .tag {
+  display: inline-block;
+  background-color: var(--dourado-color);
+  color: var(--bg-dark-primary);
+  padding: 6px 15px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 20px;
+}
+
+.about-text h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-light);
+  margin: 0;
+  line-height: 1.2;
+}
+
+.about-text p {
+  font-size: 1rem;
+  color: var(--bg-color);
+  line-height: 1.7;
+  margin: 15px 0 30px 0;
+}
+
+.about-text .cta-button {
+  background-color: var(--dourado-color);
+  color: var(--bg-dark-primary);
+  border: none;
+  border-radius: 30px;
+  padding: 12px 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.about-text .cta-button:hover {
+  filter: brightness(1.1);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(201, 169, 100, 0.2);
+}
+
+/* --- RESPONSIVIDADE PARA TELAS MENORES --- */
+@media (max-width: 850px) {
+  .about-content {
+    flex-direction: column;
+    /* Empilha a foto em cima do texto */
+    gap: 0;
+  }
+
+  .about-photo img {
+    width: 200px;
+    height: 200px;
+    margin-bottom: -100px;
+    /* Puxa a foto para cima do texto */
+    border-width: 4px;
+  }
+
+  .about-text {
+    padding: 120px 30px 30px 30px;
+    /* Espaço superior para a foto */
+    margin-left: 0;
+    text-align: center;
+  }
+}
+
+
+/* --- CONTÊINER PRINCIPAL DA SEÇÃO --- */
+.impacto-section {
+  width: 100%;
+  max-width: 1400px;
+  /* Largura máxima da seção */
+  background-color: var(--bg-light-gray);
+  border-radius: 30px;
+  padding: 60px 80px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+/* --- LAYOUT DO CONTEÚDO (TEXTO + IMAGEM) --- */
 .impacto-container {
   display: flex;
-  max-width: 1100px;
-  width: 100%;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   gap: 60px;
-  flex-wrap: wrap;
-  margin: 0 auto;
 }
 
+/* --- COLUNA DE TEXTO (Esquerda) --- */
 .impacto-texto {
   flex: 1;
+  /* Permite que o texto cresça */
+  color: var(--black-color);
   max-width: 600px;
-  color: #282828;
 }
 
 .impacto-texto .tag {
   display: inline-block;
   background-color: var(--dourado-color);
-  color: var(--bg-color);
-  padding: 8px 16px;
+  color: var();
+  padding: 8px 18px;
   border-radius: 20px;
-  font-size: 12px;
-  margin-bottom: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 25px;
 }
 
 .impacto-texto h2 {
-  font-size: 32px;
+  font-size: 2.8rem;
   font-weight: 700;
-  margin-bottom: 30px;
+  line-height: 1.3;
+  margin: 0 0 40px 0;
 }
 
+/* --- ESTATÍSTICAS --- */
 .estatisticas {
   display: flex;
-  gap: 40px;
-  font-size: 16px;
-  font-weight: 600;
-  color: var(--black-color);
-  
+  gap: 50px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.estatisticas strong {
+.stat-item strong {
   display: block;
-  font-size: 80px;
-  color: var(--black-color);
+  font-size: 72px;
   font-weight: 400;
+  color: var(--black-color);
 }
 
-.impacto-video {
-  flex: 1;
-  max-width: 600px;
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+.stat-item span {
+  font-size: 0.9rem;
+  color: var(--text-secondary-dark);
+  font-weight: 500;
 }
 
-.impacto-video video {
+/* --- COLUNA DA IMAGEM (Direita) --- */
+.impacto-imagem {
+  flex-basis: 45%;
+  /* Define uma base de largura para a imagem */
+  max-width: 739px;
+
+}
+
+.impacto-imagem img {
   width: 100%;
   height: auto;
+  border-radius: 25px;
   display: block;
-  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
 }
 
-.impacto-texto,
-.impacto-video {
-  flex: 1 1 45%;      /* ✅ cada um pega ~metade do container */
-  max-width: 500px;
-  min-width: 300px;
+/* --- RESPONSIVIDADE PARA TELAS MENORES --- */
+@media (max-width: 1200px) {
+  .impacto-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .estatisticas {
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .impacto-imagem {
+    width: 100%;
+    max-width: 600px;
+    /* Permite que a imagem fique maior quando empilhada */
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .impacto-section {
+    padding: 40px 30px;
+  }
+
+  .impacto-texto h2 {
+    font-size: 2rem;
+  }
+
+  .estatisticas {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .stat-item strong {
+    font-size: 2.5rem;
+  }
 }
 
 
@@ -427,7 +542,7 @@ a {
   overflow: hidden;
   position: relative;
   z-index: 3;
-  
+
 }
 
 .hover-item {
@@ -460,25 +575,31 @@ a {
   width: 100%;
   height: 100%;
   backdrop-filter: blur(1px);
-  -webkit-backdrop-filter: blur(1px); 
- background: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.5),   /* embaixo */
-    rgba(0, 0, 0, 0.1),   /* Meio */
-    rgba(0, 0, 0, 0)      /* topo*/
-  );  z-index: 1;
+  -webkit-backdrop-filter: blur(1px);
+  background: linear-gradient(to top,
+      rgba(0, 0, 0, 0.5),
+      /* embaixo */
+      rgba(0, 0, 0, 0.1),
+      /* Meio */
+      rgba(0, 0, 0, 0)
+      /* topo*/
+    );
+  z-index: 1;
   pointer-events: none;
 }
 
 .hover-item {
-  position: relative; /* necessário para posicionar o ::before */
+  position: relative;
+  /* necessário para posicionar o ::before */
   z-index: 0;
 }
 
-.hover-item > * {
+.hover-item>* {
   position: relative;
-  z-index: 2; /* para garantir que o texto fique acima do blur */
+  z-index: 2;
+  /* para garantir que o texto fique acima do blur */
 }
+
 .hover-item h2 {
   font-size: 18px;
   transition: font-size 0.5s ease;
@@ -520,19 +641,21 @@ a {
 }
 
 .processo h1 {
-  font-size: 36px;
+  font-size: 2.8rem;
   font-weight: bold;
   margin-bottom: 10px;
   text-shadow: 2px 2px #ccc;
+  padding-top: 50px;
 }
 
 .subtitulo {
-  font-size: 18px;
-  margin-bottom: 40px;
-  background-color: rgb(212, 208, 208);
   display: inline-block;
-  padding: 10px 20px;
-  border-radius: 30px;
+  background-color: #d4d4d4;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 50x;
 }
 
 .etapas {
@@ -548,12 +671,14 @@ a {
 .etapa {
   background-color: var(--black-color);
   color: var(--bg-color);
-  padding: 45px 20px 32px; /* mais espaço interno, especialmente abaixo */
+  padding: 45px 20px 32px;
+  /* mais espaço interno, especialmente abaixo */
   border-radius: 30px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
   text-align: left;
   width: 100%;
-  min-height: 200px; /* opcional, garante altura mínima */
+  min-height: 200px;
+  /* opcional, garante altura mínima */
 }
 
 .etapa h2 {
@@ -565,7 +690,8 @@ a {
 .etapa p {
   font-size: 12px;
   line-height: 1.4;
-  margin-bottom: 15px; /* novo: cria espaço antes do botão */
+  margin-bottom: 15px;
+  /* novo: cria espaço antes do botão */
 }
 
 .seta {
@@ -575,15 +701,23 @@ a {
   margin-top: 8px;
 }
 
-.btn {
+.btn-dourado {
   background-color: var(--dourado-color);
-  border: none;
-  padding: 4px 16px;
+  color: var(--black-color);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 5px 15px;
   border-radius: 30px;
-  cursor: pointer;
-  font-weight: 400;
-  font-size: 12px;
-  
+  align-self: flex-end;
+  /* Alinha o botão à esquerda */
+  transition: all 0.3s ease;
+}
+
+.btn-dourado:hover {
+  filter: brightness(1.1);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(201, 169, 100, 0.2);
 }
 
 .imagem {
@@ -591,7 +725,7 @@ a {
   height: auto;
   border-radius: 30px;
   object-fit: cover;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
 
@@ -633,6 +767,7 @@ a {
     align-items: center;
   }
 }
+
 /*SEÇÃO 3 ABAIXO ------------------ */
 
 .carousel-hover {
@@ -680,154 +815,194 @@ a {
 /* TELA 5 - PLANOS ------------------*/
 
 .portfolio-section {
-    background-color: #282828; /* rgba(40, 40, 40, 0.9) */
-    color: #f0f0f0; 
-    padding: 138px 80px 70px 70PX;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%; 
+  border-radius: 0 30px 0 30px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+    0 10px 10px rgba(0, 0, 0, 0.22);
+  position: relative;
+  overflow: hidden;
+  color: #f0f0f0;
+  padding: 138px 80px 70px 70PX;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  border-radius: ;
+}
+
+.portfolio-section h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 80px;
 }
 
 /* Main Heading for Plans Section */
 .plans-main-heading {
-    font-size: 36px;
+  font-size: 36px;
   font-weight: bold;
   margin-bottom: 10px;
-    color: #FFFFFF;
-    margin-bottom: 80px;
-    text-align: left;
-    display: flex;
-    justify-content: left;
-    
-  }
+  color: #FFFFFF;
+  margin-bottom: 80px;
+  text-align: left;
+  display: flex;
+  justify-content: left;
+
+}
 
 /* Plans Container */
 .plans-container {
-    display: flex;
-    flex-wrap: wrap; /* Allow cards to wrap on smaller screens */
-    justify-content: center;
-    gap: 30px; /* Space between cards */
-    max-width: 1700px; /* Max width to contain cards */
-    width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  /* Allow cards to wrap on smaller screens */
+  justify-content: center;
+  gap: 30px;
+  /* Space between cards */
+  max-width: 1700px;
+  /* Max width to contain cards */
+  width: 100%;
 }
 
 /* Individual Card Styles */
 .plan-card {
-    width: 360px;
-    height: 570px;
-    background-color: #4B4B4B; /* Standard card background */
-    border-radius: 30px;
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    position: relative; /* For recommended tag */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    color: #f0f0f0; /* Ensure text inside cards is light */
+  width: 360px;
+  height: 570px;
+  background-color: #4B4B4B;
+  /* Standard card background */
+  border-radius: 30px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  /* For recommended tag */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  color: #f0f0f0;
+  /* Ensure text inside cards is light */
 }
 
 .plan-card.recommended {
-    background-color: #3E3E3E; /* Darker background for recommended card */
+  background-color: #3E3E3E;
+  /* Darker background for recommended card */
 }
 
 .recommended-tag {
-    position: absolute;
-    top: -15px; /* Position above the card */
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: var(--dourado-color); /* Gold/Amber color */
-    color: #1F2937; /* Dark text */
-    padding: 8px 15px;
-    border-radius: 30px;
-    font-size: 0.85em;
-    font-weight: bold;
-    text-transform: uppercase;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  position: absolute;
+  top: -15px;
+  /* Position above the card */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--dourado-color);
+  /* Gold/Amber color */
+  color: #1F2937;
+  /* Dark text */
+  padding: 8px 15px;
+  border-radius: 30px;
+  font-size: 0.85em;
+  font-weight: bold;
+  text-transform: uppercase;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .plan-title {
-    font-size: 1.8em;
-    color: #FFFFFF;
-    margin-bottom: 10px; /* Space below title */
-    font-weight: 600;
+  font-size: 1.8em;
+  color: #FFFFFF;
+  margin-bottom: 10px;
+  /* Space below title */
+  font-weight: 600;
 }
 
 .plan-card .custom-description-top {
-    font-size: 0.9em;
-    color: #D0D0D0;
-    margin-bottom: 20px;
-    line-height: 1.5;
+  font-size: 0.9em;
+  color: #D0D0D0;
+  margin-bottom: 20px;
+  line-height: 1.5;
 }
 
 .features-list {
-    list-style: none;
-    padding: 0;
-    margin: 15px 0; /* Space around features list */
-    flex-grow: 1; /* Allow list to take available space */
+  list-style: none;
+  padding: 0;
+  margin: 15px 0;
+  /* Space around features list */
+  flex-grow: 1;
+  /* Allow list to take available space */
 }
 
 .features-list li {
-    display: flex;
-    align-items: center;
-    margin-bottom: 12px;
-    font-size: 0.95em;
-    color: #E0E0E0; /* Slightly lighter text for features */
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  font-size: 0.95em;
+  color: #E0E0E0;
+  /* Slightly lighter text for features */
 }
 
 .features-list .icon {
-    margin-right: 10px;
-    font-size: 1.2em;
-    width: 20px; /* Ensure alignment */
-    text-align: center;
+  margin-right: 10px;
+  font-size: 1.2em;
+  width: 20px;
+  /* Ensure alignment */
+  text-align: center;
 }
 
 .plan-price {
-    font-size: 2em; /* Larger price */
-    color: #FFFFFF;
-    font-weight: bold;
-    margin-top: 15px; /* Space above price */
-    margin-bottom: 10px;
+  font-size: 2em;
+  /* Larger price */
+  color: #FFFFFF;
+  font-weight: bold;
+  margin-top: 15px;
+  /* Space above price */
+  margin-bottom: 10px;
 }
 
 .plan-description {
-    font-size: 0.85em;
-    color: #B0B0B0; /* Dimmer white for description */
-    line-height: 1.4;
-    margin-bottom: 20px; /* Space before button */
-    min-height: 50px; /* Ensure consistent spacing if description length varies */
+  font-size: 0.85em;
+  color: #B0B0B0;
+  /* Dimmer white for description */
+  line-height: 1.4;
+  margin-bottom: 20px;
+  /* Space before button */
+  min-height: 50px;
+  /* Ensure consistent spacing if description length varies */
 }
 
 .plan-card .card-footer {
-     margin-top: auto; /* Pushes footer to bottom */
+  margin-top: auto;
+  /* Pushes footer to bottom */
 }
 
 .btn-contract {
-    display: block;
-    width: 100%;
-    padding: 15px;
-    background-color: #E0E0E0; /* Light gray button */
-    color: #1F2937; /* Dark text for button */
-    border: none;
-    border-radius: 30px;
-    font-size: 1em;
-    font-weight: bold;
-    text-align: center;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin-top: 10px; /* Space above button */
+  display: block;
+  width: 100%;
+  padding: 15px;
+  background-color: #E0E0E0;
+  /* Light gray button */
+  color: #1F2937;
+  /* Dark text for button */
+  border: none;
+  border-radius: 30px;
+  font-size: 1em;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+  /* Space above button */
+  margin-bottom: 0px;
 }
 
 .btn-contract:hover {
-    background-color: #C0C0C0; /* Slightly darker on hover */
+  background-color: #C0C0C0;
+  /* Slightly darker on hover */
 }
 
 /* Specific styles for "Plano sob Medida" button if it's the only element in footer */
 .plan-card.custom-plan .card-footer {
-    margin-top: 20px; /* Adjust if needed */
+  margin-top: 20px;
+  /* Adjust if needed */
 }
+
 .plan-card.custom-plan .btn-contract {
-    margin-top: 0; /* Reset margin if it's the only element */
+  margin-top: 0;
+  /* Reset margin if it's the only element */
 }
 
 
@@ -838,15 +1013,17 @@ a {
   padding: 0 54px;
   margin-bottom: 100px;
   position: relative;
+  width: 1812px;
+  max-width: 100%;
+  min-height: 792px;
 }
 
 .orcamento-container {
-  background-color: #C8C8C8;
   width: 100%;
   max-width: 1812px;
   height: 792px;
   margin: 0 auto;
-  border-radius: 20px;
+  border-radius: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -854,145 +1031,33 @@ a {
   z-index: 2;
 }
 
-.orcamento-bg {
-    background-color: #282828;
-    padding: 20px;
-}
+
+/*------ORCAMENTO FORM------*/
+
+
 
 .orcamento-wrapper {
   background-color: #0F0F0F;
   position: absolute;
-  top: 396px; /* metade da altura de 792px */
+  top: 396px;
+  /* metade da altura de 792px */
   left: 20px;
   right: 20px;
   height: 1256px;
   z-index: 1;
-  border-radius: 20px;
-}
-
-
-.orcamento-bloco {
-  display: flex;
-  gap: 40px;
-  padding: 40px;
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-sizing: border-box;
-}
-
-.orcamento-imagem {
-  width: 736px;
-  height: 641px;
-  object-fit: cover;
-  border-radius: 10px;
-}
-
-.orcamento-conteudo {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  color: #0F0F0F;
-  max-width: 900px;
-}
-
-.etiqueta {
-  background-color: var(--bg-color);
-  color: var(--black-color);
-  width: 125px;
-  height: 25px;
   border-radius: 30px;
-  font-size: 12px;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow:
-    0 0 0.8px var(--black-color),       
-    2px 2px 3px rgba(0, 0, 0, 0.25);
-    margin-left: 20px;
-
-}
-
-.titulo {
-  font-size: 52px;
-  font-weight: 700;
-  margin-bottom: 0px;
-  color: var(--black-color);
-  padding-top: 10px;
-  text-shadow:
-    0 0 0.9px var(--black-color),       
-    2px 2px 3px rgba(0, 0, 0, 0.25);
-  margin-left: 20px;
-}
-
-.descricao {
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 1.6;
-  margin-bottom: 30px;
-  color: var(--black-color);
-  margin-left: 20px;
-  width: 681px;
-}
-
-.botao-personalizado {
-  background-color: var(--bg-color);
-  color: var(--black-color);
-  font-weight: 600;
-  padding: 14px 24px;
-  border: none;
-  margin-bottom: 40px;
-  cursor: pointer;
-  transition: background 0.3s;
-  border-radius: 50px;
-  text-align: center;
-  font-size: 28px;
-  width: 701px;
-  height: 95px;
-  box-shadow:
-    0 0 0.8px var(--black-color),       
-    2px 2px 3px rgba(0, 0, 0, 0.25);
-    margin-bottom: 82 px;
-    margin-left: 20px;
-
-  
 }
 
 
 
-.botao-personalizado:hover {
-  background-color: var(--dourado-color);
-}
-
-.orcamento-numeros {
-  display: flex;
-  gap: 80px;
-  font-size: 16px;
-  font-weight: 600;
-  color: var(--black-color);
-  padding-left: 10px;
-  margin-top: 0 px;
-  margin-left: 20px;
-
-}
-
-.orcamento-numeros strong {
-  display: block;
-  font-size: 80px;
-  color: var(--black-color);
-  font-weight: 400;
-}
 
 /*-- TELA 7 - FOOTER --*/
 
 .footer {
   background-color: #0F0F0F;
   color: #fff;
-  border-radius: 30px ;
-  
+  border-radius: 30px;
+
 }
 
 .footer-container {
@@ -1050,7 +1115,8 @@ a {
 
 .footer-destaque {
   display: flex;
-  align-items: center; /* Alinha verticalmente */
+  align-items: center;
+  /* Alinha verticalmente */
   justify-content: center;
   gap: 20px;
   font-family: 'Anton', sans-serif;
@@ -1068,7 +1134,7 @@ a {
   font-size: 200px;
   letter-spacing: 2px;
   font-family: 'Anton', sans-serif;
-  
+
 }
 
 .footer-info {
@@ -1076,9 +1142,12 @@ a {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  margin: 0 auto;    /* Centraliza o conteúdo na tela */
-  padding: 20px 40px; /* Espaçamento interno opcional */
-  flex-wrap: wrap;    /* Evita quebra feia em telas pequenas */
+  margin: 0 auto;
+  /* Centraliza o conteúdo na tela */
+  padding: 20px 40px;
+  /* Espaçamento interno opcional */
+  flex-wrap: wrap;
+  /* Evita quebra feia em telas pequenas */
 }
 
 .footer-info p {
@@ -1093,4 +1162,575 @@ a {
 
 .footer-info a:hover {
   text-decoration: underline;
+}
+
+/**----------------------------------*/
+
+
+.orcamento-section button {
+  border-radius: 20px;
+  border: 1px solid #000000;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 12px 45px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: transform 80ms ease-in;
+  cursor: pointer;
+}
+
+button.ghost {
+  background-color: transparent;
+  border-color: #ffffff;
+}
+
+
+.form-container {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  transition: all 0.6s ease-in-out;
+  width: 1812px;
+  max-width: 100%;
+  min-height: 792px;
+}
+
+.container.right-panel-active .sign-up-container {
+  transform: translateX(100%);
+  opacity: 1;
+  z-index: 5;
+}
+
+.container.right-panel-active .sign-in-container {
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+.overlay-container {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+
+  overflow: hidden;
+  transition: transform 0.6s ease-in-out;
+  z-index: 100;
+  width: 1812px;
+  max-width: 100%;
+  min-height: 792px;
+
+}
+
+.overlay {
+
+  position: relative;
+  left: -100%;
+  height: 100%;
+  width: 200%;
+  transform: translateX(0);
+  transition: transform 0.6s ease-in-out;
+  border-radius: 30px;
+
+}
+
+
+.container.right-panel-active .overlay-container {
+  transform: translateX(-100%);
+}
+
+.container.right-panel-active .overlay {
+  transform: translateX(50%);
+}
+
+.overlay-panel {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 40px;
+  text-align: center;
+  top: 0;
+  height: 100%;
+  width: 50%;
+  transform: translateX(0);
+  transition: transform 0.6s ease-in-out;
+
+}
+
+.overlay-left {
+  transform: translateX(-20%);
+  left: 0;
+
+}
+
+.container.right-panel-active .overlay-left {
+  transform: translateX(0);
+}
+
+.overlay-right {
+  right: 0;
+  transform: translateX(0);
+}
+
+/* --- CONFIGURAÇÃO DO LAYOUT PRINCIPAL --- */
+
+/* 1. Transformamos o #container em um flex container.
+      Isso alinhará seus filhos (.form-container) lado a lado. */
+#container {
+  display: flex;
+  width: 100%;
+  /* Ocupa toda a largura do seu pai, .orcamento-container */
+  min-height: 792px;
+  /* Uma altura mínima para visualização */
+  border-radius: 30px;
+  /* Bordas arredondadas como no exemplo */
+  overflow: hidden;
+  /* Essencial para que a imagem não vaze das bordas */
+  position: relative;
+  /* Boa prática para o contexto de empilhamento */
+}
+
+/* 2. Fazemos com que cada .form-container ocupe metade do espaço. */
+#container .form-container {
+  width: 50%;
+}
+
+
+/* --- ESTILIZANDO A METADE DA IMAGEM --- */
+
+/* 3. Selecionamos o primeiro contêiner (sign-up) e sua imagem. */
+.form-container.sign-up-container {
+  /* Este container não precisa de estilos, pois a imagem o preencherá. */
+}
+
+/* 4. A MÁGICA ACONTECE AQUI! */
+.form-container.sign-up-container .img-bg-left {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: grayscale(100%);
+  border-radius: 30px;
+}
+
+
+/* --- ESTILIZANDO A OUTRA METADE (CONTEÚDO) --- */
+
+/* 5. Estilizamos a segunda metade para ter o fundo colorido.
+      E escondemos a imagem que está dentro dela, sem apagar do HTML. */
+.form-container.sign-in-container {
+
+  /* Adicionamos flexbox aqui também para centralizar o conteúdo futuro (botão, etc) */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  border-radius: 30px;
+  background-image: url('../assets/images/img-bg-orcamento.png');
+  background-size: cover;
+  background-position: center;
+}
+
+
+/* 6. Escondemos a imagem desnecessária na segunda metade. */
+.form-container.sign-in-container .img-bg-left {
+  display: none;
+}
+
+
+
+h1 {
+  font-weight: 700;
+  margin: 0;
+  font-size: 2rem;
+}
+
+p {
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+  margin: 20px 0 30px;
+}
+
+/* --- CONTÊINER PRINCIPAL E IMAGEM DE FUNDO --- */
+.orcamento-container {
+  width: 100%;
+  max-width: 1812px;
+}
+
+.container {
+  background-color: #1c1c1c;
+  border-radius: 20px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  min-height: 650px;
+}
+
+.img-bg-left {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* --- CONTÊINERES DOS PAINÉIS (FORMULÁRIO E IMAGEM) --- */
+.form-container {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  transition: all 0.6s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sign-in-container {
+  left: 0;
+  width: 50%;
+  z-index: 2;
+}
+
+.sign-up-container {
+  left: 0;
+  width: 50%;
+  opacity: 0;
+  z-index: 1;
+  padding: 0 40px;
+  /* Espaçamento para o formulário */
+}
+
+/* --- OVERLAY DESLIZANTE --- */
+.overlay-container {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  transition: transform 0.6s ease-in-out;
+  z-index: 100;
+}
+
+.overlay {
+  background: #121212;
+  background: linear-gradient(to right, #1c1c1c, #121212);
+  color: #FFFFFF;
+  position: relative;
+  left: -100%;
+  height: 100%;
+  width: 200%;
+  transform: translateX(0);
+  transition: transform 0.6s ease-in-out;
+}
+
+.overlay-panel {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 40px;
+  text-align: center;
+  top: 0;
+  height: 100%;
+  width: 50%;
+  transform: translateX(0);
+  transition: transform 0.6s ease-in-out;
+
+}
+
+.overlay-left {
+  transform: translateX(-20%);
+  background-image: url('../assets/images/img-bg-orcamento.png');
+  background-size: cover;
+  background-position: center center;
+}
+
+/* ADICIONE ESTE NOVO CÓDIGO */
+
+/* Adiciona a camada de sobreposição escura */
+.overlay-left::before {
+  content: '';
+  /* Necessário para o pseudo-elemento funcionar */
+  position: absolute;
+  /* Para cobrir todo o painel pai */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  /* AQUI ESTÁ A MÁGICA: um fundo preto com 50% de opacidade */
+  background-color: rgba(0, 0, 0, 0.5);
+
+  z-index: 0;
+  /* Garante que a camada fique atrás do texto */
+}
+
+/* Garante que o conteúdo (texto/botão) fique na frente da camada escura */
+.content-wrapper {
+  /* ...outros estilos que já existem... */
+  position: relative;
+  /* Necessário para que o z-index funcione */
+  z-index: 1;
+}
+
+.overlay-left {
+  transform: translateX(-20%);
+}
+
+.overlay-right {
+  right: 0;
+  transform: translateX(0);
+}
+
+/* --- ANIMAÇÕES --- */
+.container.right-panel-active .sign-in-container {
+  transform: translateX(100%);
+}
+
+.container.right-panel-active .overlay-container {
+  transform: translateX(-100%);
+}
+
+.container.right-panel-active .sign-up-container {
+  transform: translateX(100%);
+  opacity: 1;
+  z-index: 5;
+  animation: show 0.6s;
+}
+
+.container.right-panel-active .overlay {
+  transform: translateX(50%);
+}
+
+.container.right-panel-active .overlay-left {
+  transform: translateX(0);
+}
+
+.container.right-panel-active .overlay-right {
+  transform: translateX(20%);
+}
+
+@keyframes show {
+
+  0%,
+  49.99% {
+    opacity: 0;
+    z-index: 1;
+  }
+
+  50%,
+  100% {
+    opacity: 1;
+    z-index: 5;
+  }
+}
+
+/* --- ESTILOS DO FORMULÁRIO E BOTÕES --- */
+button.ghost {
+  background-color: transparent;
+  border: 2px solid #f5f5f5;
+  color: #f5f5f5;
+  border-radius: 30px;
+  padding: 12px 45px;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button.ghost:hover {
+  background-color: #f5f5f5;
+  color: #121212;
+  transform: scale(1.05);
+}
+
+.form-glass {
+  width: 100%;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-glass h2 {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #f0f0f0;
+  margin-bottom: 10px;
+}
+
+.form-glass fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.form-glass .full-width {
+  grid-column: 1 / -1;
+}
+
+.form-glass legend {
+  grid-column: 1 / -1;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #e0e0e0;
+  margin-bottom: 5px;
+}
+
+.form-glass input,
+.form-glass select {
+  width: 100%;
+  padding: 12px 15px;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 30px;
+  color: #fff;
+  font-size: 0.95rem;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.3s ease;
+}
+
+.form-glass input:focus,
+.form-glass select:focus {
+  outline: none;
+  border-color: #fff;
+}
+
+.form-glass select {
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23cccccc' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+  background-size: 1em;
+}
+
+.form-glass select option {
+  background: #121212;
+}
+
+.form-glass select:invalid {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.form-glass input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.checkbox-group span {
+  color: var(--bg-color);
+}
+
+.checkbox-group {
+  display: flex;
+  flex-wrap:inherit;
+  gap: 20px 20px;
+}
+
+.checkbox-group label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.checkbox-group input[type="checkbox"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 10px;
+  height: 10px;
+  border: 2px solid #ccc;
+  border-radius: 20%;
+  /* <--- AQUI ESTÁ A LINHA */
+  margin-right: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.checkbox-group input[type="checkbox"]:checked {
+  background-color: #f5f5f5;
+  border-color: #f5f5f5;
+  background-image: url("../assets/images/icon-planos-tic.svg");
+  background-position: center;
+}
+
+.form-glass button[type="submit"] {
+  background-color: #f5f5f5;
+  color: #121212;
+  border: 2px solid #f5f5f5;
+  border-radius: 30px;
+  padding: 12px 28px;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.form-glass button[type="submit"]:hover {
+  background-color: transparent;
+  color: #f5f5f5;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+  .container {
+    min-height: 100vh;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .overlay-container {
+    display: none;
+  }
+
+  .sign-in-container,
+  .sign-up-container {
+    width: 100%;
+    padding: 0 30px;
+  }
+
+  .sign-up-container {
+    opacity: 0;
+    transform: translateX(100%);
+    z-index: 1;
+  }
+
+  .img-bg-left {
+    display: none;
+  }
+
+  /* Esconde imagem para dar espaço ao conteúdo */
+  .sign-in-container {
+    background: #242424;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px;
+  }
+
+  .container.right-panel-active .sign-up-container {
+    transform: translateX(0);
+    opacity: 1;
+    z-index: 5;
+  }
+
+  .container.right-panel-active .sign-in-container {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
 }

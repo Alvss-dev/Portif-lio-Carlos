@@ -22,6 +22,12 @@
 
 }
 
+a {
+         text-decoration: none;
+         color: inherit;
+         /* Outras propriedades que você deseja redefinir, como padding, margin, etc. */
+     }
+
 body {
   background-color: #282828;
 }
@@ -1831,7 +1837,7 @@ button.ghost:hover {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding-right: 77px;
+    padding-right: 150px;
 }
 
 .side-menu.active {
@@ -1940,4 +1946,13 @@ button.ghost:hover {
     padding: 40px;
     text-align: center;
 }
+
+#close-menu-btn {
+    position: absolute;
+    top: 38px;
+    right: 86px;
+    z-index: 1002; /* Garante que fique acima de tudo no menu */
+}
+
+
 

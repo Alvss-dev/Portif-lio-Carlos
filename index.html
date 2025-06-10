@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="src/styles/root.css">
-    <link rel="script" href="./src/scripts/script.js">
 </head>
 
 <body>
@@ -31,16 +30,25 @@
                 
             </button>
             
-            <button class="open-menu-btn" id="menu-toggle">
+            <button class="menu-toggle-btn" id="menu-toggle">
                 <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTQgNkgyME00IDEySDIwTTQgMThIMjAiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+Cjwvc3ZnPgo="
                     alt="Abrir Menu">
             </button>
+            
+
 
             </header>
 
 
 
             <div class="side-menu" id="side-menu">
+            
+                <button class="menu-toggle-btn" id="close-menu-btn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18 6L6 18M6 6L18 18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>    
+
                 <nav>
                     <div class="nav-link-wrapper"><a href="#"><span class="arrow-icon"><svg width="24" height="24"
                                     viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -67,6 +75,8 @@
                                     <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="white" stroke-width="2"
                                         stroke-linecap="round" stroke-linejoin="round" />
                                 </svg></span>SOBRE</a></div>
+
+                    
                 </nav>
             </div>
             <div class="page-overlay" id="page-overlay"></div>
@@ -171,26 +181,26 @@
 
     <!-- TELA 3 - PORTFOLIO -->
     <section class="carousel-hover">
-        <div class="hover-item" style="background-image: url('/src/assets/images/5_1.webp');">
-            <h2>Alto Padrão</h2>
+        <a href="Portifolio-1-section.html" target="_blank" class="hover-item" style="background-image: url('./src/assets/images/5_1.webp');">
+            <h2>Alto padrão</h2>
             <h3>Vila Mariana</h3>
-        </div>
-        <div class="hover-item" style="background-image: url('/src/assets/images/5_2.webp');">
+        </a>
+        <a href="Portifolio-2-section.html" target="_blank" class="hover-item" style="background-image: url('./src/assets/images/5_2.webp');">
             <h2>Studio</h2>
             <h3>ABC</h3>
-        </div>
-        <div class="hover-item" style="background-image: url('/src/assets/images/5_3.webp');">
-            <h2>Alto Padrão</h2>
+        </a>
+        <a href="Portifolio-3-section.html" target="_blank" class="hover-item" style="background-image: url('./src/assets/images/5_3.webp');">
+            <h2>Alto padrão</h2>
             <h3>Butantã</h3>
-        </div>
-        <div class="hover-item" style="background-image: url('/src/assets/images/5_4.webp');">
-            <h2>Alto Padrão</h2>
+        </a>
+        <a href="Portifolio-4-section.html" target="_blank" class="hover-item" style="background-image: url('./src/assets/images/5_4.webp');">
+            <h2>Alto padrão</h2>
             <h3>Morumbi</h3>
-        </div>
-        <div class="hover-item" style="background-image: url('/src/assets/images/5_5.webp');">
+        </a>
+        <a href="Portifolio-5-section.html" target="_blank" class="hover-item" style="background-image: url('./src/assets/images/5_5.webp');">
             <h2>Residencial</h2>
-            <h3>Pinheiros</h3>
-        </div>
+            <h3>Pineheiros</h3>
+        </a>
     </section>
 
     <!-- TELA 4 - PROCESSO -->
@@ -500,7 +510,7 @@
     </section>
 
     <!-- ------------------------------------ -->
-<script src="/src/scripts/script.js"></script>
+<script src="src/scripts/script.js"></script>
     <!-- ------------------------------------ -->
 
 </body>

@@ -15,21 +15,46 @@
 
         <!-- HEADER - HERO -->
         <header>
-            <img src="src/assets/images/logo.Calos.svg" alt="logo do site">
+            </header>
 
-            <nav>
-                <a href="">HOME</a>
-                <a href="">PORTFÓLIO</a>
-                <a href="">ORÇAMENTO </a>
-                <a href="">PLANOS</a>
-                <a href="">SOBRE</a>
-            </nav>
 
-            <button class="bar">
-                <img src="src/assets/images/Icon.menu.svg" alt="bar">
+
+            <button class="open-menu-btn" id="menu-toggle">
+                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTQgNkgyME00IDEySDIwTTQgMThIMjAiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+Cjwvc3ZnPgo="
+                    alt="Abrir Menu">
             </button>
+            <div class="side-menu" id="side-menu">
+                <nav>
+                    <div class="nav-link-wrapper"><a href="#"><span class="arrow-icon"><svg width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="white" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg></span>HOME</a></div>
+                    <div class="nav-link-wrapper"><a href="#"><span class="arrow-icon"><svg width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="white" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg></span>PORTFÓLIO</a></div>
+                    <div class="nav-link-wrapper"><a href="#"><span class="arrow-icon"><svg width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="white" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg></span>ORÇAMENTO</a></div>
+                    <div class="nav-link-wrapper"><a href="#"><span class="arrow-icon"><svg width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="white" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg></span>PLANOS</a></div>
+                    <div class="nav-link-wrapper"><a href="#"><span class="arrow-icon"><svg width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="white" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg></span>SOBRE</a></div>
+                </nav>
+            </div>
+            <div class="page-overlay" id="page-overlay"></div>
 
-        </header>
+        
 
         <!-- MAIN - HERO -->
         <main class="hero-section">
@@ -60,7 +85,7 @@
             </button>
             </div> -->
         </main>
-        
+
 
         <!-- TELA EXTRA - TEXTO + VÍDEO -->
 
@@ -512,3 +537,32 @@
         container.classList.remove('right-panel-active');
     });
 </script>
+
+<script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const sideMenu = document.getElementById('side-menu');
+        const pageOverlay = document.getElementById('page-overlay');
+
+        function toggleMenu() {
+            const isActive = sideMenu.classList.contains('active');
+            
+            if (isActive) {
+                sideMenu.classList.remove('active');
+                pageOverlay.classList.remove('active');
+            } else {
+                sideMenu.classList.add('active');
+                pageOverlay.classList.add('active');
+            }
+        }
+
+        menuToggle.addEventListener('click', toggleMenu);
+        pageOverlay.addEventListener('click', toggleMenu);
+    </script>
+
+    <script>
+        function toggleMenu() {
+    document.body.classList.toggle('no-scroll'); // Adiciona/Remove a classe
+    sideMenu.classList.toggle('active');
+    pageOverlay.classList.toggle('active');
+}
+    </script>

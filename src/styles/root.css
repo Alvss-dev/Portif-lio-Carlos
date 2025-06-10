@@ -25,6 +25,9 @@
 body {
   background-color: #282828;
 }
+body.no-scroll {
+    overflow: hidden;
+}
 
 /*IMG - FUNDO - HERO ------------------*/
 .hero {
@@ -1793,150 +1796,148 @@ button.ghost:hover {
 
 /*---------------------------------------*/
 
-* 2. BOTÃO DE ABERTURA DO MENU */
-        .open-menu-btn {
-            position: fixed;
-            top: 30px;
-            right: 30px;
-            z-index: 1001;
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 10px;
-        }
+/* 2. BOTÃO DE ABERTURA DO MENU */
+.open-menu-btn {
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    z-index: 1001;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
 
-        .open-menu-btn img {
-            width: 30px;
-            height: 30px;
-        }
+.open-menu-btn img {
+    width: 30px;
+    height: 30px;
+}
 
-        /* 3. MENU LATERAL DIREITO */
-        .side-menu {
-            position: fixed;
-            top: 0;
-            right: 0;
-            left: auto;
-            width: 100%;
-            height: 100%;
-            z-index: 1000;
-            background-color: transparent;
+/* 3. MENU (A CAMADA QUE CONTÉM A NAVEGAÇÃO) */
+.side-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: auto;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    background-color: transparent;
 
-            opacity: 0;
-            pointer-events: none;
-            transition: opacity 0.5s ease;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
 
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-            padding-right: 77px;
-        }
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 77px;
+}
 
-        .side-menu.active {
-            opacity: 1;
-            pointer-events: all;
-        }
+.side-menu.active {
+    opacity: 1;
+    pointer-events: all;
+}
 
-        .side-menu nav {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-        }
-        
-        .nav-link-wrapper {
-             overflow: hidden;
-             margin: 10px 0;
-             display: flex;
-             justify-content: flex-end;
-        }
+.side-menu nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
 
-        .side-menu nav a {
-            color: #ffffff;
-            font-size: clamp(2.5rem, 8vw, 6rem);
-            font-weight: 700;
-            text-decoration: none;
-            text-transform: uppercase;
-            display: inline-flex;
-            align-items: center;
-            gap: 20px;
-            
-            transform: translateY(100%);
-            transition: transform 0.6s cubic-bezier(0.76, 0, 0.24, 1), opacity 0.4s ease;
-        }
-        
-        .side-menu.active .nav-link-wrapper a {
-            transform: translateY(0);
-        }
+.nav-link-wrapper {
+     overflow: hidden;
+     margin: 10px 0;
+     display: flex;
+     justify-content: flex-end;
+}
 
-        /* Atrasos para a animação em cascata */
-        .side-menu.active .nav-link-wrapper:nth-child(1) a { transition-delay: 0.15s; }
-        .side-menu.active .nav-link-wrapper:nth-child(2) a { transition-delay: 0.20s; }
-        .side-menu.active .nav-link-wrapper:nth-child(3) a { transition-delay: 0.25s; }
-        .side-menu.active .nav-link-wrapper:nth-child(4) a { transition-delay: 0.30s; }
-        .side-menu.active .nav-link-wrapper:nth-child(5) a { transition-delay: 0.35s; }
+.side-menu nav a {
+    color: #ffffff;
+    font-size: clamp(2.5rem, 8vw, 6rem);
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    gap: 20px;
+    
+    transform: translateY(100%);
+    transition: transform 0.6s cubic-bezier(0.76, 0, 0.24, 1), opacity 0.4s ease;
+}
 
-        /* --- EFEITO DE HOVER CORRIGIDO --- */
-        .side-menu.active nav:hover a {
-            opacity: 0.2;
-        }
+.side-menu.active .nav-link-wrapper a {
+    transform: translateY(0);
+}
 
-        .side-menu.active nav a:hover {
-            opacity: 1;
-            /* O 'translateX' foi removido para evitar que a seta seja cortada. */
-        }
+/* Atrasos para a animação em cascata */
+.side-menu.active .nav-link-wrapper:nth-child(1) a { transition-delay: 0.15s; }
+.side-menu.active .nav-link-wrapper:nth-child(2) a { transition-delay: 0.20s; }
+.side-menu.active .nav-link-wrapper:nth-child(3) a { transition-delay: 0.25s; }
+.side-menu.active .nav-link-wrapper:nth-child(4) a { transition-delay: 0.30s; }
+.side-menu.active .nav-link-wrapper:nth-child(5) a { transition-delay: 0.35s; }
 
+/* EFEITO DE HOVER */
+.side-menu.active nav:hover a {
+    opacity: 0.2;
+}
 
-        /* Ícone de seta no hover */
-        .arrow-icon {
-            width: clamp(2rem, 6vw, 4rem);
-            height: clamp(2rem, 6vw, 4rem);
-            border: 2px solid #ffffff;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            transform: scale(0.5);
-            transition: opacity 0.4s ease, transform 0.4s ease;
-            order: -1;
-            margin-right: 20px;
-            margin-left: 0;
-        }
-        
-        .arrow-icon svg {
-            transform: rotate(180deg);
-        }
+.side-menu.active nav a:hover {
+    opacity: 1;
+}
 
-        .side-menu nav a:hover .arrow-icon {
-            opacity: 1;
-            transform: scale(1);
-        }
+/* Ícone de seta no hover */
+.arrow-icon {
+    width: clamp(2rem, 6vw, 4rem);
+    height: clamp(2rem, 6vw, 4rem);
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: scale(0.5);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    order: -1;
+    margin-right: 20px;
+}
 
-        /* 4. OVERLAY DA PÁGINA (EFEITO DE VIDRO EM TELA CHEIA) */
-        .page-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            
-            background-color: rgba(0, 0, 0, 0.2);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
+.arrow-icon svg {
+    transform: rotate(180deg);
+}
 
-            z-index: 999;
-            
-            opacity: 0;
-            pointer-events: none;
-            transition: opacity 0.5s ease;
-        }
+.side-menu nav a:hover .arrow-icon {
+    opacity: 1;
+    transform: scale(1);
+}
 
-        .page-overlay.active {
-            opacity: 1;
-            pointer-events: all;
-        }
+/* 4. OVERLAY DA PÁGINA (EFEITO DE VIDRO EM TELA CHEIA) */
+.page-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 
-        /* Conteúdo principal da página para demonstração */
-        .main-content {
-            padding: 40px;
-            text-align: center;
-        }
+    z-index: 999;
+    
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+}
+
+.page-overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+/* Conteúdo principal da página para demonstração */
+.main-content {
+    padding: 40px;
+    text-align: center;
+}
+

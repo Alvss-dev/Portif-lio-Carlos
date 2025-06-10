@@ -44,4 +44,31 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+
+    const menuToggle = document.getElementById('menu-toggle');
+    const sideMenu = document.getElementById('side-menu');
+    const pageOverlay = document.getElementById('page-overlay');
+
+    function toggleMenu() {
+        const isActive = sideMenu.classList.contains('active');
+
+        if (isActive) {
+                sideMenu.classList.remove('active');
+                pageOverlay.classList.remove('active');
+        } else {
+                sideMenu.classList.add('active');
+                pageOverlay.classList.add('active');
+        }
+    }
+
+    menuToggle.addEventListener('click', toggleMenu);
+    pageOverlay.addEventListener('click', toggleMenu);   
+    
+    function toggleMenu() {
+        
+        document.body.classList.toggle('no-scroll'); // Adiciona/Remove a classe
+        sideMenu.classList.toggle('active');
+        pageOverlay.classList.toggle('active');
+    }
+
 });

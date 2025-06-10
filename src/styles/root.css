@@ -297,6 +297,18 @@ aside>p {
 
 }
 
+.imagem-logo{
+  width: 125px;
+  height: auto;
+}
+
+.seta-passos{
+  width: 15px;
+  height: auto;
+  margin-left: 10px;
+  filter: invert(100%);
+}	
+
 /* --- LAYOUT DO CONTEÚDO (FOTO + TEXTO) --- */
 .about-content {
   display: flex;

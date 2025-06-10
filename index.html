@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="src/styles/root.css">
+    <link rel="script" href="./src/scripts/script.js">
 </head>
 
 <body>
@@ -458,57 +459,10 @@
     </section>
 
     <!-- ------------------------------------ -->
-
+<script src="/src/scripts/script.js"></script>
     <!-- ------------------------------------ -->
 
-    <script src="script.js"></script>
 </body>
 
 </html>
 
-<!-- ANIMAÇÃO BOTOES - HERO -->
-<script>
-    let botoes = document.querySelectorAll(".botaoEfeito");
-
-    botoes.forEach((botao) => {
-        let circulo = botao.querySelector(".circulo");
-
-        botao.addEventListener("mousemove", function (e) {
-            let distanciaBotao = this.getBoundingClientRect();
-
-            let x = e.clientX - distanciaBotao.left;
-            let y = e.clientY - distanciaBotao.top;
-
-            circulo.style.top = `${y}px`;
-            circulo.style.left = `${x}px`;
-        });
-    });
-</script>
-
-<script>
-    const botaoAbrir = document.getElementById('abrirOrcamento');
-    const overlay = document.getElementById('formOrcamento');
-    const botaoFechar = document.querySelector('.close-form');
-
-    botaoAbrir.addEventListener('click', () => {
-        overlay.style.display = 'flex';
-    });
-
-    botaoFechar.addEventListener('click', () => {
-        overlay.style.display = 'none';
-    });
-</script>
-
-<script>
-    const container = document.getElementById('container');
-    const signUpButton = document.getElementById('signUp');
-    const signInButton = document.getElementById('signIn');
-
-    signUpButton.addEventListener('click', () => {
-        container.classList.add('right-panel-active');
-    });
-
-    signInButton.addEventListener('click', () => {
-        container.classList.remove('right-panel-active');
-    });
-</script>

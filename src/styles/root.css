@@ -25,7 +25,6 @@
 a {
          text-decoration: none;
          color: inherit;
-         /* Outras propriedades que você deseja redefinir, como padding, margin, etc. */
      }
 
 body {
@@ -60,7 +59,6 @@ body.no-scroll {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
-  /* Fundo preto 50% transparente */
   z-index: 1;
 }
 
@@ -99,6 +97,8 @@ button>img {
 nav {
   display: flex;
   gap: 35px;
+  margin-left: 370px;
+  
 }
 
 nav>a {
@@ -157,7 +157,6 @@ aside>p {
   height: 100%;
   padding: 800px 190px 100px 190px;
   backdrop-filter: blur(2px);
-  /* controla o espaçamento superior/inferior */
 }
 
 
@@ -183,7 +182,6 @@ aside>p {
   background-color: rgba(255, 255, 255, 0.9);
   position: absolute;
   top: 396px;
-  /* metade da altura de 792px */
   left: 20px;
   right: 20px;
   height: 1000px;
@@ -216,7 +214,6 @@ aside>p {
 
 
 
-/* Estilos dos botões */
 .botoes .button1,
 .botoes .button2 {
   border-radius: 30px;
@@ -255,7 +252,6 @@ aside>p {
 }
 
 
-/* Estilo da bolha */
 .circulo {
   width: 0px;
   height: 0px;
@@ -270,19 +266,16 @@ aside>p {
 
 .button1 .circulo {
   background-color: rgba(0, 0, 0, 0.2);
-  /* preto suave BOTÃO 1*/
 }
 
 .button2 .circulo {
   background-color: rgba(255, 255, 255, 0.2);
-  /* branco suave BOTÃO 2 */
 }
 
 .butao-below .circulo {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-/* Hover que expande a bolha */
 .botaoEfeito:hover .circulo {
   width: 300px;
   height: 300px;
@@ -301,8 +294,6 @@ aside>p {
 /*TELA 2 - SOBRE ------------------*/
 
 
-
-/* --- CONTÊINER PRINCIPAL DA SEÇÃO --- */
 .about-section-v2 {
   width: 100%;
   max-width: 1100px;
@@ -322,7 +313,6 @@ aside>p {
   filter: invert(100%);
 }	
 
-/* --- LAYOUT DO CONTEÚDO (FOTO + TEXTO) --- */
 .about-content {
   display: flex;
   justify-content: center;
@@ -331,12 +321,9 @@ aside>p {
   padding-top: 400px;
 }
 
-/* --- FOTO --- */
 .about-photo {
   flex-shrink: 0;
-  /* Impede que a foto encolha */
   z-index: 2;
-  /* Garante que a foto fique por cima do texto */
 }
 
 .about-photo img {
@@ -347,21 +334,16 @@ aside>p {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
 }
 
-/* --- CAIXA DE TEXTO --- */
 .about-text {
   background-color: var(--bg-dark-secondary);
   border-radius: 20px;
   padding: 40px;
-  /* Recuo para a foto sobrepor */
   padding-left: 180px;
-  /* Margem negativa para puxar o texto para debaixo da foto */
   margin-left: -150px;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
   flex-grow: 1;
-  /* Faz a caixa de texto ocupar o espaço restante */
 }
 
-/* --- ELEMENTOS DE TEXTO --- */
 .about-text .tag {
   display: inline-block;
   background-color: var(--dourado-color);
@@ -409,11 +391,9 @@ aside>p {
   box-shadow: 0 8px 20px rgba(201, 169, 100, 0.2);
 }
 
-/* --- RESPONSIVIDADE PARA TELAS MENORES --- */
 @media (max-width: 850px) {
   .about-content {
     flex-direction: column;
-    /* Empilha a foto em cima do texto */
     gap: 0;
   }
 
@@ -421,31 +401,26 @@ aside>p {
     width: 200px;
     height: 200px;
     margin-bottom: -100px;
-    /* Puxa a foto para cima do texto */
     border-width: 4px;
   }
 
   .about-text {
     padding: 120px 30px 30px 30px;
-    /* Espaço superior para a foto */
     margin-left: 0;
     text-align: center;
   }
 }
 
 
-/* --- CONTÊINER PRINCIPAL DA SEÇÃO --- */
 .impacto-section {
   width: 100%;
   max-width: 1400px;
-  /* Largura máxima da seção */
   background-color: var(--bg-light-gray);
   border-radius: 30px;
   padding: 60px 80px;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
 }
 
-/* --- LAYOUT DO CONTEÚDO (TEXTO + IMAGEM) --- */
 .impacto-container {
   display: flex;
   align-items: center;
@@ -453,10 +428,8 @@ aside>p {
   gap: 60px;
 }
 
-/* --- COLUNA DE TEXTO (Esquerda) --- */
 .impacto-texto {
   flex: 1;
-  /* Permite que o texto cresça */
   color: var(--black-color);
   max-width: 600px;
 }
@@ -481,7 +454,6 @@ aside>p {
   margin: 0 0 40px 0;
 }
 
-/* --- ESTATÍSTICAS --- */
 .estatisticas {
   display: flex;
   gap: 50px;
@@ -515,10 +487,8 @@ aside>p {
   font-weight: 500;
 }
 
-/* --- COLUNA DA IMAGEM (Direita) --- */
 .impacto-imagem {
   flex-basis: 45%;
-  /* Define uma base de largura para a imagem */
   max-width: 739px;
 
 }
@@ -531,7 +501,6 @@ aside>p {
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
 }
 
-/* --- RESPONSIVIDADE PARA TELAS MENORES --- */
 @media (max-width: 1200px) {
   .impacto-container {
     flex-direction: column;
@@ -546,7 +515,6 @@ aside>p {
   .impacto-imagem {
     width: 100%;
     max-width: 600px;
-    /* Permite que a imagem fique maior quando empilhada */
     margin-top: 40px;
   }
 }
@@ -629,14 +597,12 @@ aside>p {
 
 .hover-item {
   position: relative;
-  /* necessário para posicionar o ::before */
   z-index: 0;
 }
 
 .hover-item>* {
   position: relative;
   z-index: 2;
-  /* para garantir que o texto fique acima do blur */
 }
 
 .hover-item h2 {
@@ -711,13 +677,11 @@ aside>p {
   background-color: var(--black-color);
   color: var(--bg-color);
   padding: 45px 20px 32px;
-  /* mais espaço interno, especialmente abaixo */
   border-radius: 30px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
   text-align: left;
   width: 100%;
   min-height: 200px;
-  /* opcional, garante altura mínima */
 }
 
 .etapa h2 {
@@ -730,7 +694,6 @@ aside>p {
   font-size: 12px;
   line-height: 1.4;
   margin-bottom: 15px;
-  /* novo: cria espaço antes do botão */
 }
 
 .seta {
@@ -749,7 +712,6 @@ aside>p {
   padding: 5px 15px;
   border-radius: 30px;
   align-self: flex-end;
-  /* Alinha o botão à esquerda */
   transition: all 0.3s ease;
 }
 
@@ -807,8 +769,6 @@ aside>p {
   }
 }
 
-/*SEÇÃO 3 ABAIXO ------------------ */
-
 .carousel-hover {
   display: flex;
   height: 100vh;
@@ -864,7 +824,7 @@ aside>p {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  border-radius: ;
+  border-radius:20px ;
 }
 
 .portfolio-section h1 {
@@ -873,7 +833,6 @@ aside>p {
   margin-bottom: 80px;
 }
 
-/* Main Heading for Plans Section */
 .plans-main-heading {
   font-size: 36px;
   font-weight: bold;
@@ -886,52 +845,40 @@ aside>p {
 
 }
 
-/* Plans Container */
 .plans-container {
   display: flex;
   flex-wrap: wrap;
-  /* Allow cards to wrap on smaller screens */
   justify-content: center;
   gap: 30px;
-  /* Space between cards */
   max-width: 1700px;
-  /* Max width to contain cards */
   width: 100%;
 }
 
-/* Individual Card Styles */
 .plan-card {
   width: 360px;
   height: 570px;
   background-color: #4B4B4B;
-  /* Standard card background */
   border-radius: 30px;
   padding: 30px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   position: relative;
-  /* For recommended tag */
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   color: #f0f0f0;
-  /* Ensure text inside cards is light */
 }
 
 .plan-card.recommended {
   background-color: #3E3E3E;
-  /* Darker background for recommended card */
 }
 
 .recommended-tag {
   position: absolute;
   top: -15px;
-  /* Position above the card */
   left: 50%;
   transform: translateX(-50%);
   background-color: var(--dourado-color);
-  /* Gold/Amber color */
   color: #1F2937;
-  /* Dark text */
   padding: 8px 15px;
   border-radius: 30px;
   font-size: 0.85em;
@@ -944,7 +891,6 @@ aside>p {
   font-size: 1.8em;
   color: #FFFFFF;
   margin-bottom: 10px;
-  /* Space below title */
   font-weight: 600;
 }
 
@@ -959,9 +905,7 @@ aside>p {
   list-style: none;
   padding: 0;
   margin: 15px 0;
-  /* Space around features list */
   flex-grow: 1;
-  /* Allow list to take available space */
 }
 
 .features-list li {
@@ -970,41 +914,33 @@ aside>p {
   margin-bottom: 12px;
   font-size: 0.95em;
   color: #E0E0E0;
-  /* Slightly lighter text for features */
 }
 
 .features-list .icon {
   margin-right: 10px;
   font-size: 1.2em;
   width: 20px;
-  /* Ensure alignment */
   text-align: center;
 }
 
 .plan-price {
   font-size: 2em;
-  /* Larger price */
   color: #FFFFFF;
   font-weight: bold;
   margin-top: 15px;
-  /* Space above price */
   margin-bottom: 10px;
 }
 
 .plan-description {
   font-size: 0.85em;
   color: #B0B0B0;
-  /* Dimmer white for description */
   line-height: 1.4;
   margin-bottom: 20px;
-  /* Space before button */
   min-height: 50px;
-  /* Ensure consistent spacing if description length varies */
 }
 
 .plan-card .card-footer {
   margin-top: auto;
-  /* Pushes footer to bottom */
 }
 
 .btn-contract {
@@ -1012,9 +948,7 @@ aside>p {
   width: 100%;
   padding: 15px;
   background-color: #E0E0E0;
-  /* Light gray button */
   color: #1F2937;
-  /* Dark text for button */
   border: none;
   border-radius: 30px;
   font-size: 1em;
@@ -1023,24 +957,19 @@ aside>p {
   cursor: pointer;
   transition: background-color 0.3s ease;
   margin-top: 10px;
-  /* Space above button */
   margin-bottom: 0px;
 }
 
 .btn-contract:hover {
   background-color: #C0C0C0;
-  /* Slightly darker on hover */
 }
 
-/* Specific styles for "Plano sob Medida" button if it's the only element in footer */
 .plan-card.custom-plan .card-footer {
   margin-top: 20px;
-  /* Adjust if needed */
 }
 
 .plan-card.custom-plan .btn-contract {
   margin-top: 0;
-  /* Reset margin if it's the only element */
 }
 
 
@@ -1070,12 +999,6 @@ aside>p {
   position: relative;
   z-index: 2;
 }
-
-
-
-/*------ORCAMENTO FORM------*/
-
-
 
 .orcamento-wrapper {
   background-color: #0F0F0F;
@@ -1155,7 +1078,6 @@ aside>p {
 .footer-destaque {
   display: flex;
   align-items: center;
-  /* Alinha verticalmente */
   justify-content: center;
   gap: 20px;
   font-family: 'Anton', sans-serif;
@@ -1182,11 +1104,9 @@ aside>p {
   align-items: center;
   width: 100%;
   margin: 0 auto;
-  /* Centraliza o conteúdo na tela */
+
   padding: 20px 40px;
-  /* Espaçamento interno opcional */
   flex-wrap: wrap;
-  /* Evita quebra feia em telas pequenas */
 }
 
 .footer-info p {
@@ -1202,8 +1122,6 @@ aside>p {
 .footer-info a:hover {
   text-decoration: underline;
 }
-
-/**----------------------------------*/
 
 
 .orcamento-section button {
@@ -1316,34 +1234,19 @@ button.ghost {
 
 /* --- CONFIGURAÇÃO DO LAYOUT PRINCIPAL --- */
 
-/* 1. Transformamos o #container em um flex container.
-      Isso alinhará seus filhos (.form-container) lado a lado. */
 #container {
   display: flex;
   width: 100%;
-  /* Ocupa toda a largura do seu pai, .orcamento-container */
   min-height: 792px;
-  /* Uma altura mínima para visualização */
   border-radius: 30px;
-  /* Bordas arredondadas como no exemplo */
   overflow: hidden;
-  /* Essencial para que a imagem não vaze das bordas */
   position: relative;
-  /* Boa prática para o contexto de empilhamento */
 }
 
-/* 2. Fazemos com que cada .form-container ocupe metade do espaço. */
 #container .form-container {
   width: 50%;
 }
 
-
-/* --- ESTILIZANDO A METADE DA IMAGEM --- */
-
-/* 3. Selecionamos o primeiro contêiner (sign-up) e sua imagem. */
-.form-container.sign-up-container {
-  /* Este container não precisa de estilos, pois a imagem o preencherá. */
-}
 
 /* 4. A MÁGICA ACONTECE AQUI! */
 .form-container.sign-up-container .img-bg-left {
@@ -1357,12 +1260,9 @@ button.ghost {
 
 
 /* --- ESTILIZANDO A OUTRA METADE (CONTEÚDO) --- */
-
-/* 5. Estilizamos a segunda metade para ter o fundo colorido.
-      E escondemos a imagem que está dentro dela, sem apagar do HTML. */
 .form-container.sign-in-container {
 
-  /* Adicionamos flexbox aqui também para centralizar o conteúdo futuro (botão, etc) */
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1374,7 +1274,6 @@ button.ghost {
 }
 
 
-/* 6. Escondemos a imagem desnecessária na segunda metade. */
 .form-container.sign-in-container .img-bg-left {
   display: none;
 }
@@ -1445,7 +1344,6 @@ button.ghost {
   opacity: 0;
   z-index: 1;
   padding: 0 40px;
-  /* Espaçamento para o formulário */
 }
 
 /* --- OVERLAY DESLIZANTE --- */
@@ -1502,31 +1400,27 @@ button.ghost {
 
 }
 
-/* ADICIONE ESTE NOVO CÓDIGO */
 
-/* Adiciona a camada de sobreposição escura */
+
 .overlay-left::before {
   content: '';
-  /* Necessário para o pseudo-elemento funcionar */
   position: absolute;
-  /* Para cobrir todo o painel pai */
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
 
-  /* AQUI ESTÁ A MÁGICA: um fundo preto com 50% de opacidade */
+
   background-color: rgba(0, 0, 0, 0.5);
 
   z-index: 0;
-  /* Garante que a camada fique atrás do texto */
+
 }
 
-/* Garante que o conteúdo (texto/botão) fique na frente da camada escura */
+
 .content-wrapper {
-  /* ...outros estilos que já existem... */
+
   position: relative;
-  /* Necessário para que o z-index funcione */
   z-index: 1;
   display: flex;
   justify-content: center;
@@ -1550,7 +1444,6 @@ button.ghost {
   transform: translateX(0);
 }
 
-/* --- ANIMAÇÕES --- */
 .container.right-panel-active .sign-in-container {
   transform: translateX(100%);
 }
@@ -1716,7 +1609,6 @@ button.ghost:hover {
   height: 10px;
   border: 2px solid #ccc;
   border-radius: 20%;
-  /* <--- AQUI ESTÁ A LINHA */
   margin-right: 10px;
   cursor: pointer;
   transition: all 0.2s ease;
@@ -1778,7 +1670,7 @@ button.ghost:hover {
     display: none;
   }
 
-  /* Esconde imagem para dar espaço ao conteúdo */
+
   .sign-in-container {
     background: #242424;
     display: flex;
@@ -1800,18 +1692,17 @@ button.ghost:hover {
   }
 }
 
-/*---------------------------------------*/
+
 
 /* 2. BOTÃO DE ABERTURA DO MENU */
 .open-menu-btn {
     position: fixed;
     top: 30px;
     right: 30px;
-    z-index: 1001;
+    z-index: 1;
     background: none;
     border: none;
     cursor: pointer;
-    padding: 10px;
 }
 
 .open-menu-btn img {
@@ -1827,7 +1718,7 @@ button.ghost:hover {
     left: auto;
     width: 100%;
     height: 100%;
-    z-index: 1000;
+    z-index: 9999;
     background-color: transparent;
 
     opacity: 0;
@@ -1876,14 +1767,14 @@ button.ghost:hover {
     transform: translateY(0);
 }
 
-/* Atrasos para a animação em cascata */
+
 .side-menu.active .nav-link-wrapper:nth-child(1) a { transition-delay: 0.15s; }
 .side-menu.active .nav-link-wrapper:nth-child(2) a { transition-delay: 0.20s; }
 .side-menu.active .nav-link-wrapper:nth-child(3) a { transition-delay: 0.25s; }
 .side-menu.active .nav-link-wrapper:nth-child(4) a { transition-delay: 0.30s; }
 .side-menu.active .nav-link-wrapper:nth-child(5) a { transition-delay: 0.35s; }
 
-/* EFEITO DE HOVER */
+
 .side-menu.active nav:hover a {
     opacity: 0.2;
 }
@@ -1941,7 +1832,7 @@ button.ghost:hover {
     pointer-events: all;
 }
 
-/* Conteúdo principal da página para demonstração */
+
 .main-content {
     padding: 40px;
     text-align: center;
@@ -1950,10 +1841,11 @@ button.ghost:hover {
 #close-menu-btn {
     position: absolute;
     top: 38px;
-    right: 86px;
-    z-index: 1002; /* Garante que fique acima de tudo no menu */
+    right: 79px;
 }
 
-
+#side-menu {
+    z-index: 9999;
+}	
 
 

@@ -146,7 +146,7 @@ header .imagem-logo {
 
 .hero-content h1 {
     font-size: 4rem;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 1.2;
 }
 
@@ -488,7 +488,8 @@ header .imagem-logo {
     .results-text h2 {
         margin: 0 0 1rem 0;
         /* Remove a centralização */
-        font-size: 2rem;
+        font-size: 2.5rem;
+        font-weight: 500;
     }
 
 
@@ -502,7 +503,8 @@ header .imagem-logo {
     }
 
     .stats__item strong {
-        font-size: 3rem;
+        font-size: 4.5rem;
+        font-weight: 200;
     }
 
     .stats__item span {
@@ -1137,9 +1139,9 @@ header .imagem-logo {
   top: 396px;
   left: 20px;
   right: 20px;
-  height: 1256px;
-  z-index: 1;
+    z-index: 1;
   border-radius: 30px;
+  padding-top: 23rem;
 }
 
 
@@ -1164,6 +1166,7 @@ header .imagem-logo {
     font-size: 1.1rem;
     font-weight: 700;
     margin-bottom: 16px;
+    color: var(--bg-color);
 }
 
 .footer-col ul {
@@ -1204,20 +1207,19 @@ header .imagem-logo {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
+    flex-wrap: none;
     gap: 10px 20px;
-    font-family: 'Anton', sans-serif;
     color: var(--bg-color);
     margin-bottom: 60px;
 }
 
 .footer-destaque .texto-menor {
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: 400;
 }
 
 .footer-destaque .destaque {
-    font-size: 12rem;
+    font-size: 9rem;
     letter-spacing: 2px;
 }
 
@@ -1230,10 +1232,12 @@ header .imagem-logo {
     border-top: 1px solid #333;
     flex-wrap: wrap;
     gap: 20px;
+    color: var(--bg-color);
 }
 
 .footer-info p {
     margin: 0;
+    color: var(--bg-color);
 }
 
 .footer-info a {
@@ -1302,12 +1306,17 @@ header .imagem-logo {
         text-align: center;
     }
 
+    .footer-destaque {
+      flex-direction: column;
+      align-items: center;
+    }
+
     .footer-destaque .texto-menor {
         font-size: 2rem;
     }
 
     .footer-destaque .destaque {
-        font-size: 5rem;
+        font-size: 3.5rem;
     }
 
     .footer-info {

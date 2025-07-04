@@ -855,7 +855,7 @@ aside>p {
 }
 
 .plan-card {
-  width: 360px;
+  width: 340px;
   height: 570px;
   background-color: #4B4B4B;
   border-radius: 30px;
@@ -1067,6 +1067,7 @@ aside>p {
   font-size: 1.4rem;
   margin-right: 15px;
   transition: color 0.3s;
+
 }
 
 .footer-social-icons a:hover {
@@ -1085,14 +1086,14 @@ aside>p {
 }
 
 .footer-destaque .texto-menor {
-  font-size: 100px;
+  font-size: 4rem;
   font-weight: 400;
   font-family: 'Anton', sans-serif;
 
 }
 
 .footer-destaque .destaque {
-  font-size: 200px;
+  font-size: 12rem;
   letter-spacing: 2px;
   font-family: 'Anton', sans-serif;
 

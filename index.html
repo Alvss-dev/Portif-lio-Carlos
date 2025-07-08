@@ -271,141 +271,124 @@
     <section id="orcamento" class="orcamento-section">
         <div class="orcamento-container">
             <div class="container" id="container">
-
-                <div class="form-container sign-up-container">
-                    <form class="form-glass" action="#" onsubmit="return false;">
-                        <h2>Proposta para Fotografia de Destaque</h2>
-                        <fieldset>
-                            <input type="text" placeholder="Seu nome" required />
-                            <input type="email" placeholder="E-mail" required />
-                            <input type="tel" placeholder="Telefone" required />
-                        </fieldset>
-                        <fieldset>
-                            <input class="full-width" type="text" placeholder="Localização do imóvel" required />
-                            <select required>
-                                <option value="" disabled selected>Tipo de imóvel</option>
-                                <option>Residencial</option>
-                                <option>Alto padrão</option>
-                                <option>Comercial</option>
-                            </select>
-                            <input type="number" placeholder="Metragem (m²)" required />
-                        </fieldset>
-                        <fieldset class="full-width">
-                            <legend>Serviços Desejados</legend>
-                            <div class="checkbox-group">
-                                <label><input type="checkbox" /><span>Fotos</span></label>
-                                <label><input type="checkbox" /><span>Vídeo</span></label>
-                                <label><input type="checkbox" /><span>Drone</span></label>
-                                <label><input type="checkbox" /><span>Tour 360°</span></label>
-                            </div>
-                        </fieldset>
-                        <button type="submit">Enviar Solicitação</button>
-                    </form>
-                </div>
-
-
-                <div class="form-container sign-in-container">
-                    <div class="welcome-panel">
-
-                    </div>
-                </div>
-
-
-                <div class="overlay-container">
-                    <div class="overlay">
-
-                        <div class="overlay-panel overlay-left" id="orcamento-botao">
-                            <div class="content-wrapper">
-
-                                <button class="ghost" id="signIn">Voltar</button>
-                            </div>
-                        </div>
-
-                        <div class="overlay-panel overlay-right">
+                <div id="info-panel" class="budget-panel is-visible">
+                    <div class="budget-panel__content">
+                        <div class="budget-panel__photo"></div>
+                        <div class="budget-panel__text">
                             <h1>Fotografia que Vende</h1>
-                            <p>Transforme seu anúncio em uma oferta irrecusável.<br> Inicie sua proposta com um clique.
-                            </p>
-                            <button class="ghost" id="signUp">Solicite seu Orçamento</button>
+                            <p>Transforme seu anúncio em uma oferta irrecusável. Inicie sua proposta com um clique.</p>
+                            <button class="ghost2" id="goToFormBtn">Solicite seu Orçamento</button>
                             <div class="estatisticas">
-                                <div class="stat-itemV2">
-                                    <strong>90%</strong>
-                                    <span>Dos compradores decidem visitar<br>pela qualidade das fotos</span>
-                                </div>
-                                <div class="stat-itemV2">
-                                    <strong>+32%</strong>
-                                    <span>Na Velocidade de Venda</span>
-                                </div>
-                                <div class="stat-itemV2">
-                                    <strong>47%</strong>
-                                    <span>Maior valor percebido por<br>compradores online</span>
+                                <div class="stat-itemV2"><strong>90%</strong><span>Dos compradores decidem
+                                        visitar</span></div>
+                                <div class="stat-itemV2"><strong>+32%</strong><span>Na Velocidade de Venda</span></div>
+                                <div class="stat-itemV2"><strong>47%</strong><span>Maior valor percebido online</span>
                                 </div>
                             </div>
                         </div>
                     </div>
-
                 </div>
+
+                <div id="form-panel" class="budget-panel">
+                    <div class="budget-panel__content">
+                        <div class="budget-panel__photo"></div>
+                        <div class="budget-panel__text">
+                            <button class="ghost1 budget-panel__back-btn" id="goBackBtn">‹ Voltar</button>
+                            <form class="form-glass" action="#" onsubmit="return false;">
+                                <h2>Proposta de Destaque</h2>
+                                <fieldset>
+                                    <input type="text" placeholder="Seu nome" required />
+                                    <input type="email" placeholder="E-mail" required />
+                                </fieldset>
+                                <fieldset class="full-width">
+                                    <input type="tel" placeholder="Telefone" required />
+                                </fieldset>
+                                <fieldset class="full-width">
+                                    <input type="text" placeholder="Localização do imóvel" required />
+                                </fieldset>
+                                <fieldset>
+                                    <select required>
+                                        <option value="" disabled selected>Tipo de imóvel</option>
+                                        <option>Residencial</option>
+                                        <option>Alto padrão</option>
+                                        <option>Comercial</option>
+                                    </select>
+                                    <input type="number" placeholder="Metragem (m²)" required />
+                                </fieldset>
+                                <fieldset class="full-width">
+                                    <legend>Serviços Desejados</legend>
+                                    <div class="checkbox-group">
+                                        <label><input type="checkbox" /><span>Fotos</span></label>
+                                        <label><input type="checkbox" /><span>Vídeo</span></label>
+                                        <label><input type="checkbox" /><span>Drone</span></label>
+                                        <label><input type="checkbox" /><span>Tour 360°</span></label>
+                                    </div>
+                                </fieldset>
+                                <button type="submit">Enviar Solicitação</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
             </div>
     </section>
     <!-- TELA 7 - FOOTER -->
-                     <div class="orcamento-wrapper">
+    <div class="orcamento-wrapper">
 
-                    <footer class="footer" id="footer">
-                        <div class="footer-grid">
-                            <div class="footer-col">
-                                <h4>Serviços</h4>
-                                <ul>
-                                    <li><a href="#portfolio">Planos e preços</a></li>
-                                    <li><a href="#">Gerencia Residencial</a></li>
-                                </ul>
-                            </div>
-                            <div class="footer-col">
-                                <h4>Contato</h4>
-                                <ul>
-                                    <li><a href="mailto:contato@casaperfeita.com">Email: contato@casaperfeita.com</a>
-                                    </li>
-                                    <li><a href="https://wa.me/551140028922">WhatsApp: (11) 4002-8922</a></li>
-                                </ul>
-                            </div>
-                            <div class="footer-col">
-                                <h4>Ajuda</h4>
-                                <ul>
-                                    <li><a href="#">Documentation</a></li>
-                                    <li><a href="#">Guides</a></li>
-                                    <li><a href="#">Plans Comparison</a></li>
-                                </ul>
-                            </div>
-                            <div class="footer-col social">
-                                <h4>Conecte-se comigo</h4>
-                                <div class="footer-social-icons">
-                                    <a href="https://www.instagram.com/1alvss_/" target="_blank"
-                                        rel="noopener noreferrer"><img src="src/assets/images/Instagram.svg"
-                                            alt="Instagram"></a>
-                                    <a href="https://wa.me/5511962838589" target="_blank" rel="noopener noreferrer"><img
-                                            src="src/assets/images/WhatsApp.svg" alt="WhatsApp"></a>
-                                    <a href="https://www.youtube.com/watch?v=owGVCNfOlJ0" target="_blank"
-                                        rel="noopener noreferrer"><img src="src/assets/images/YouTube.svg"
-                                            alt="YouTube"></a>
-                                    <a href="https://www.facebook.com/?locale=pt_BR" target="_blank"
-                                        rel="noopener noreferrer"><img src="src/assets/images/Facebook.svg"
-                                            alt="Facebook"></a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="footer-bottom">
-                            <div class="footer-destaque">
-                                <span class="texto-menor">SEU IMÓVEL EM</span>
-                                <span class="destaque">DESTAQUE.</span>
-                            </div>
-                            <div class="footer-info">
-                                <p>© Copyright 2025. Natan Oliveira.</p>
-                                <div>
-                                    <a href="#">Política</a> | <a href="#">Privacidade</a>
-                                </div>
-                            </div>
-                        </div>
-                    </footer>
+        <footer class="footer" id="footer">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Serviços</h4>
+                    <ul>
+                        <li><a href="#portfolio">Planos e preços</a></li>
+                        <li><a href="#">Gerencia Residencial</a></li>
+                    </ul>
                 </div>
+                <div class="footer-col">
+                    <h4>Contato</h4>
+                    <ul>
+                        <li><a href="mailto:contato@casaperfeita.com">Email: contato@casaperfeita.com</a>
+                        </li>
+                        <li><a href="https://wa.me/551140028922">WhatsApp: (11) 4002-8922</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Ajuda</h4>
+                    <ul>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">Guides</a></li>
+                        <li><a href="#">Plans Comparison</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col social">
+                    <h4>Conecte-se comigo</h4>
+                    <div class="footer-social-icons">
+                        <a href="https://www.instagram.com/1alvss_/" target="_blank" rel="noopener noreferrer"><img
+                                src="src/assets/images/Instagram.svg" alt="Instagram"></a>
+                        <a href="https://wa.me/5511962838589" target="_blank" rel="noopener noreferrer"><img
+                                src="src/assets/images/WhatsApp.svg" alt="WhatsApp"></a>
+                        <a href="https://www.youtube.com/watch?v=owGVCNfOlJ0" target="_blank"
+                            rel="noopener noreferrer"><img src="src/assets/images/YouTube.svg" alt="YouTube"></a>
+                        <a href="https://www.facebook.com/?locale=pt_BR" target="_blank" rel="noopener noreferrer"><img
+                                src="src/assets/images/Facebook.svg" alt="Facebook"></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-destaque">
+                    <span class="texto-menor">SEU IMÓVEL EM</span>
+                    <span class="destaque">DESTAQUE.</span>
+                </div>
+                <div class="footer-info">
+                    <p>© Copyright 2025. Natan Oliveira.</p>
+                    <div>
+                        <a href="#">Política</a> | <a href="#">Privacidade</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
 
     <!-- ------------------------------------ -->
     <script src="src/scripts/script.js"></script>

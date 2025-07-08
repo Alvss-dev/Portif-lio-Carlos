@@ -53,3 +53,25 @@ document.addEventListener('DOMContentLoaded', function() {
 
     
 });
+
+
+        // --- JAVASCRIPT ISOLADO PARA O COMPONENTE ---
+        document.addEventListener('DOMContentLoaded', () => {
+            const infoPanel = document.getElementById('info-panel');
+            const formPanel = document.getElementById('form-panel');
+            const goToFormBtn = document.getElementById('goToFormBtn');
+            const goBackBtn = document.getElementById('goBackBtn');
+
+            if (infoPanel && formPanel && goToFormBtn && goBackBtn) {
+                goToFormBtn.addEventListener('click', () => {
+                    infoPanel.classList.remove('is-visible');
+                    formPanel.classList.add('is-visible');
+                });
+
+                goBackBtn.addEventListener('click', () => {
+                    formPanel.classList.remove('is-visible');
+                    infoPanel.classList.add('is-visible');
+                });
+            }
+        });
+  

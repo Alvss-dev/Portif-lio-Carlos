@@ -1146,17 +1146,6 @@ header .imagem-logo {
 
 /*-- TELA 6 - ORÇAMENTO --*/
 
-.container {
-  background: #333;
-  border-radius: 20px;
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  min-height: 750px;
-  z-index: 99;
-}
-
-
 .orcamento-section {
   background-color: #1F2937;
 }
@@ -1179,279 +1168,6 @@ header .imagem-logo {
 
 
 
-.budget-panel {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: none;
-}
-
-.budget-panel.is-visible {
-  display: flex;
-}
-
-.budget-panel__content {
-  display: flex;
-  width: 100%;
-  height: 100%;
-}
-
-.budget-panel__photo {
-  flex: 1;
-  background-size: cover;
-  background-position: center;
-  filter: grayscale(80%);
-  background-color: #2a2a2a;
-  /* Placeholder para a imagem de fundo */
-  background-image: url("../assets/images/img-orçamento.png");
-}
-
-.budget-panel__text {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 40px;
-  text-align: center;
-  color: white;
-  position: relative;
-}
-
-.budget-panel__text h1 {
-  font-size: 2.5rem;
-  font-weight: 500;
-  margin: 0 0 15px 0;
-}
-
-.budget-panel__text h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  font-weight: 400;
-}
-
-.budget-panel__text p {
-  font-size: 1.1rem;
-  line-height: 1.5;
-  font-weight: 300;
-  max-width: 40ch;
-  margin: 0 0 30px 0;
-}
-
-.estatisticas {
-  display: flex;
-  gap: 30px;
-  margin-top: 40px;
-}
-
-.stat-itemV2 {
-  display: flex;
-  flex-direction: column;
-}
-
-.stat-itemV2 strong {
-  font-size: 4rem;
-  font-weight: 400;
-}
-
-.stat-itemV2 span {
-  font-size: 1rem;
-  font-weight: 300;
-  max-width: 120px;
-}
-
-/* --- BOTÕES --- */
-button.ghost2 {
-  background-color: transparent;
-  border: 2px solid var(--dourado-color);
-  color: var(--dourado-color);
-  border-radius: 30px;
-  padding: 12px 35px;
-  font-size: 0.9rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-button.ghost1 {
-  background-color: transparent;
-  border: 1px solid var(--dourado-color);
-  color: var(--dourado-color);
-  border-radius: 30px;
-  padding: 6px 20px;
-  font-size: 0.8rem;
-  font-weight: 400;
-  letter-spacing: 1px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-button.ghost1:hover {
-  background-color: var(--dourado-color);
-  color: #121212;
-}
-button.ghost2:hover {
-  background-color: var(--dourado-color);
-  color: #121212;
-}
-
-.budget-panel__back-btn {
-  position: absolute;
-  top: 40px;
-  left: 40px;
-}
-
-/* --- FORMULÁRIO COMPLETO --- */
-.form-glass {
-  width: 100%;
-  max-width: 500px;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.form-glass fieldset {
-  border: none;
-  padding: 0;
-  margin: 0;
-  display: grid;
-  gap: 12px;
-  grid-template-columns: 1fr 1fr;
-  /* Duas colunas por padrão */
-}
-
-.form-glass .full-width {
-  grid-column: 1 / -1;
-  /* Ocupa a largura inteira */
-}
-
-.form-glass input,
-.form-glass select {
-  width: 100%;
-  padding: 12px 15px;
-  background: rgba(0, 0, 0, 0.3);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 30px;
-  color: #fff;
-  font-size: 0.95rem;
-  font-family: 'Poppins', sans-serif;
-}
-
-.form-glass input::placeholder {
-  color: rgba(255, 255, 255, 0.6);
-}
-
-.form-glass select {
-  appearance: none;
-}
-
-/* Remove a seta padrão do select */
-
-.form-glass legend {
-  grid-column: 1 / -1;
-  font-size: 1rem;
-  margin-bottom: 10px;
-  font-weight: 500;
-  text-align: left;
-}
-
-.checkbox-group {
-  display: flex;
-  gap: 20px;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-}
-
-.checkbox-group label {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  cursor: pointer;
-  font-size: 0.9rem;
-}
-
-.checkbox-group input[type="checkbox"] {
-  width: 18px;
-  height: 18px;
-  accent-color: var(--dourado-color);
-}
-
-.form-glass button[type="submit"] {
-  width: 100%;
-  padding: 15px;
-  border-radius: 30px;
-  border: none;
-  background-color: #f5f5f5;
-  color: #121212;
-  font-size: 1rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  cursor: pointer;
-  margin-top: 10px;
-}
-
-/* ======================================================= */
-/* --- VERSÃO MOBILE --- */
-/* ======================================================= */
-@media (max-width: 768px) {
-
-  git
-  .budget-panel__content {
-    flex-direction: column;
-  }
-
-  .budget-panel__photo {
-    display: none;
-    /* No mobile, vamos esconder a foto para dar espaço ao formulário */
-  }
-
-  .budget-panel__text {
-    flex: 1;
-    justify-content: center;
-    /* Centraliza o conteúdo da home no mobile */
-  }
-
-  #form-panel .budget-panel__text {
-    justify-content: flex-start;
-    /* Alinha o form ao topo */
-    padding: 20px;
-    overflow-y: auto;
-  }
-
-  .budget-panel__text h1 {
-    font-size: 2rem;
-  }
-
-  .budget-panel__text h2 {
-    font-size: 1.8rem;
-  }
-
-  .estatisticas {
-    transform: scale(0.9);
-    gap: 15px;
-  }
-
-  .budget-panel__back-btn {
-    top: 20px;
-    left: 20px;
-  }
-
-  .form-glass {
-    padding-top: 60px;
-  }
-
-  .form-glass fieldset {
-    grid-template-columns: 1fr;
-    /* Coluna única no formulário */
-  }
-}
-
-
-
 /*-- TELA 7 - FOOTER --*/
 
 .footer {
@@ -1461,8 +1177,8 @@ button.ghost2:hover {
   padding: 60px 5%;
   position: relative;
   margin: -28rem 1.5rem 1.5rem 1.5rem;
-  padding-top: 27rem;
-  border-radius: 20px 20px 0 0;
+    padding-top: 27rem;
+    border-radius: 20px 20px 0 0;
   border-radius: 30px;
 }
 
@@ -1643,11 +1359,620 @@ button.ghost2:hover {
 }
 
 
+.orcamento-section button {
+  border-radius: 20px;
+  border: 1px solid #000000;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 12px 45px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: transform 80ms ease-in;
+  cursor: pointer;
+}
+
+button.ghost {
+  background-color: transparent;
+  border-color: #ffffff;
+}
+
+
+.form-container {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  transition: all 0.6s ease-in-out;
+  width: 1812px;
+  max-width: 100%;
+  min-height: 792px;
+}
+
+.container.right-panel-active .sign-up-container {
+  transform: translateX(100%);
+  opacity: 1;
+  z-index: 5;
+}
+
+.container.right-panel-active .sign-in-container {
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+.overlay-container {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+
+  overflow: hidden;
+  transition: transform 0.6s ease-in-out;
+  z-index: 100;
+  width: 1812px;
+  max-width: 100%;
+  min-height: 792px;
+
+}
+
+.overlay {
+
+  position: relative;
+  left: -100%;
+  height: 100%;
+  width: 200%;
+  transform: translateX(0);
+  transition: transform 0.6s ease-in-out;
+  border-radius: 30px;
+
+}
+
+
+.container.right-panel-active .overlay-container {
+  transform: translateX(-100%);
+}
+
+.container.right-panel-active .overlay {
+  transform: translateX(50%);
+}
+
+.overlay-panel {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 40px;
+  text-align: center;
+  top: 0;
+  height: 100%;
+  width: 50%;
+  transform: translateX(0);
+  transition: transform 0.6s ease-in-out;
+
+}
+
+
+.overlay-left {
+  transform: translateX(-20%);
+  left: 0;
+
+}
+
+.container.right-panel-active .overlay-left {
+  transform: translateX(0);
+}
+
+.overlay-right {
+  right: 0;
+  transform: translateX(0);
+}
+
+/* --- CONFIGURAÇÃO DO LAYOUT PRINCIPAL --- */
+
+#container {
+  display: flex;
+  width: 100%;
+  min-height: 792px;
+  border-radius: 30px;
+  overflow: hidden;
+  position: relative;
+}
+
+#container .form-container {
+  width: 50%;
+}
+
+
+/* 4. A MÁGICA ACONTECE AQUI! */
+.form-container.sign-up-container .img-bg-left {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: grayscale(100%);
+  border-radius: 30px;
+}
+
+
+/* --- ESTILIZANDO A OUTRA METADE (CONTEÚDO) --- */
+.form-container.sign-in-container {
+
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  border-radius: 30px;
+  background-image: url('../assets/images/img-bg-orcamento.png');
+  background-size: cover;
+  background-position: center;
+}
+
+
+.form-container.sign-in-container .img-bg-left {
+  display: none;
+}
 
 
 
+.overlay-panel h1 {
+  color: var(--bg-color);
+  font-weight: 500;
+  margin: 0;
+  font-size: 3rem;
+}
+
+.overlay-panel p {
+  color: var(--bg-color);
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+  margin: 20px 0 30px;
+}
+
+/* --- CONTÊINER PRINCIPAL E IMAGEM DE FUNDO --- */
+.orcamento-container {
+  width: 100%;
+  max-width: auto;
+}
+
+.container {
+  background: #333;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  min-height: 650px;
+  z-index: 99;
+}
+
+.img-bg-left {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.estatisticas {
+  display: flex;
+  justify-content: space-between;
+  color: var(--bg-color);
+  gap: 2rem;
+}
+
+.stat-itemV2 {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.stat-itemV2 strong {
+  font-size: 4rem;
+  font-weight: 200;
+
+  /* 36px */
+}
+
+.stat-itemV2 span {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* --- CONTÊINERES DOS PAINÉIS (FORMULÁRIO E IMAGEM) --- */
+.form-container {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  transition: all 0.6s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sign-in-container {
+  left: 0;
+  width: 50%;
+  z-index: 2;
+}
+
+.sign-up-container {
+  left: 0;
+  width: 50%;
+  opacity: 0;
+  z-index: 1;
+  padding: 0 40px;
+}
+
+/* --- OVERLAY DESLIZANTE --- */
+.overlay-container {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  transition: transform 0.6s ease-in-out;
+  z-index: 100;
+}
+
+.overlay {
+
+  position: relative;
+  left: -100%;
+  height: 100%;
+  width: 200%;
+  transform: translateX(0);
+  transition: transform 0.6s ease-in-out;
+}
+
+.overlay-panel {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 40px;
+  text-align: center;
+  top: 0;
+  height: 100%;
+  width: 50%;
+  transform: translateX(0);
+  transition: transform 0.6s ease-in-out;
+
+}
+
+.overlay-left {
+  transform: translateX(-20%);
+  background-image: url('../assets/images/img-bg-orcamento.png');
+  background-size: cover;
+  background-position: center center;
+  background-color: rgba(40, 40, 40, 0.5);
+  /* Fundo cinza com 50% de opacidade */
+  backdrop-filter: blur(80);
+  -webkit-backdrop-filter: blur(80px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+
+}
 
 
+
+.overlay-left::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+
+  background-color: rgba(0, 0, 0, 0.5);
+
+  z-index: 0;
+
+}
+
+
+.content-wrapper {
+
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-wrapper button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+}
+
+.overlay-left {
+  transform: translateX(-20%);
+}
+
+.overlay-right {
+  right: 0;
+  transform: translateX(0);
+}
+
+.container.right-panel-active .sign-in-container {
+  transform: translateX(100%);
+}
+
+.container.right-panel-active .overlay-container {
+  transform: translateX(-100%);
+}
+
+.container.right-panel-active .sign-up-container {
+  transform: translateX(100%);
+  opacity: 1;
+  z-index: 5;
+  animation: show 0.6s;
+}
+
+.container.right-panel-active .overlay {
+  transform: translateX(50%);
+}
+
+.container.right-panel-active .overlay-left {
+  transform: translateX(0);
+}
+
+.container.right-panel-active .overlay-right {
+  transform: translateX(20%);
+}
+
+@keyframes show {
+
+  0%,
+  49.99% {
+    opacity: 0;
+    z-index: 1;
+  }
+
+  50%,
+  100% {
+    opacity: 1;
+    z-index: 5;
+  }
+}
+
+/* --- ESTILOS DO FORMULÁRIO E BOTÕES --- */
+button.ghost {
+  background-color: transparent;
+  border: 2px solid var(--dourado-color, #c9a964);
+  color: var(--dourado-color, #c9a964);
+  border-radius: 30px;
+  padding: 12px 45px;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+button.ghost:hover {
+  background-color: var(--dourado-color, #c9a964);
+  color: #121212;
+  transform: scale(1.05);
+}
+
+.form-glass {
+  width: 100%;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-glass h2 {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 500;
+  color: var(--bg-color);
+  margin-bottom: 10px;
+  font-family: 'Poppins', sans-serif;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.form-glass fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.form-glass .full-width {
+  grid-column: 1 / -1;
+}
+
+.form-glass legend {
+  grid-column: 1 / -1;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #e0e0e0;
+  margin-bottom: 5px;
+}
+
+.form-glass input,
+.form-glass select {
+  width: 100%;
+  padding: 12px 15px;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 30px;
+  color: #fff;
+  font-size: 0.95rem;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.3s ease;
+}
+
+.form-glass input:focus,
+.form-glass select:focus {
+  outline: none;
+  border-color: #fff;
+}
+
+.form-glass select {
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23cccccc' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+  background-size: 1em;
+}
+
+.form-glass select option {
+  background: #121212;
+}
+
+.form-glass select:invalid {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.form-glass input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.checkbox-group span {
+  color: var(--bg-color);
+}
+
+.checkbox-group {
+  display: flex;
+  flex-wrap: inherit;
+  gap: 20px 20px;
+}
+
+.checkbox-group label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.checkbox-group input[type="checkbox"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 10px;
+  height: 10px;
+  border: 2px solid #ccc;
+  border-radius: 20%;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.checkbox-group input[type="checkbox"]:checked {
+  background-color: #f5f5f5;
+  border-color: #f5f5f5;
+  background-image: url("../assets/images/icon-planos-tic.svg");
+  background-position: center;
+}
+
+.form-glass button[type="submit"] {
+  background-color: #f5f5f5;
+  color: #121212;
+  border: 2px solid #f5f5f5;
+  border-radius: 30px;
+  padding: 12px 28px;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.form-glass button[type="submit"]:hover {
+  background-color: transparent;
+  color: #f5f5f5;
+}
+
+@media (max-width: 768px) {
+    .orcamento-section .container {
+        height: 100vh; /* Ocupa a tela inteira */
+        min-height: 0;
+        border-radius: 0;
+        background: #1F2937; /* Cor de fundo para o mobile */
+    }
+
+    /* --- ESCONDENDO PARTES DO DESKTOP --- */
+    /* O painel "sign-in" e o "overlay-left" (com o botão voltar) não são usados no nosso layout mobile */
+    .orcamento-section .sign-in-container,
+    .orcamento-section .overlay-left {
+        display: none !important;
+    }
+
+    /* --- RECONFIGURANDO OS PAINÉIS PARA MOBILE --- */
+    
+    /* O "overlay-container" se torna nosso painel de informações visível */
+    .orcamento-section .overlay-container {
+        width: 100%;
+        height: 100%;
+        left: 0;
+        z-index: 10;
+        transform: none !important; /* Ignora qualquer animação de desktop */
+        transition: opacity 0.4s ease, visibility 0.4s ease;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    /* O painel de texto dentro dele ocupa todo o espaço */
+    .orcamento-section .overlay-panel.overlay-right {
+        width: 100%;
+        transform: none !important;
+        background-color: rgba(0,0,0,0.5); /* Adiciona um fundo para legibilidade */
+        padding: 20px;
+    }
+
+    /* O "sign-up-container" se torna nosso painel de formulário escondido */
+    .orcamento-section .sign-up-container {
+        width: 100%;
+        height: 100%;
+        left: 0;
+        z-index: 20; /* Fica por cima quando visível */
+        transform: none !important;
+        opacity: 0; /* Começa invisível */
+        visibility: hidden; /* Começa inacessível */
+        transition: opacity 0.4s ease, visibility 0.4s ease;
+        background-color: #333;
+        align-items: flex-start; /* Alinha o form no topo */
+        padding: 20px;
+        overflow-y: auto; /* Permite rolagem */
+    }
+
+    /* --- ATIVANDO A TROCA DE PAINÉIS COM O JS EXISTENTE --- */
+    
+    /* Quando a classe é ativada... */
+    .orcamento-section .container.right-panel-active .sign-up-container {
+        opacity: 1; /* O painel do formulário aparece */
+        visibility: visible;
+    }
+
+    .orcamento-section .container.right-panel-active .overlay-container {
+        opacity: 0; /* O painel de informações some */
+        visibility: hidden;
+    }
+    
+    /* --- AJUSTES FINAIS NO FORMULÁRIO PARA MOBILE --- */
+    .orcamento-section .form-glass {
+        padding-top: 60px; /* Espaço para um futuro botão voltar, se necessário */
+    }
+
+    .orcamento-section .form-glass fieldset {
+        grid-template-columns: 1fr; /* Força coluna única */
+    }
+}
 
 /* 2. BOTÃO DE ABERTURA DO MENU */
 .open-menu-btn {

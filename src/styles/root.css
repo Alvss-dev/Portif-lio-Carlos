@@ -339,9 +339,11 @@ header .imagem-logo {
 
 .about-section {
   background-color: #EAEAEA;
-  /* Cor de fundo cinza claro da imagem */
   padding: 4rem 1.5rem;
-  /* Espaçamento interno (64px em cima/baixo, 24px nas laterais) */
+  border-radius: 20px 20px 0 0;
+  margin-top: -1.5rem;
+  position: relative;
+  z-index: 6;
 }
 
 .about-container {
@@ -551,6 +553,7 @@ header .imagem-logo {
     font-size: 2.5rem;
     /* Aumenta a fonte do título no desktop */
   }
+
 
 
   .portfolio-section {
@@ -994,7 +997,6 @@ header .imagem-logo {
   justify-content: center;
   gap: 30px;
   width: 100%;
-  margin: 3rem 0 6rem 0;
 }
 
 .plan-card {
@@ -1127,12 +1129,18 @@ header .imagem-logo {
   .portfolio-section {
     padding: 60px 5%;
     /* Diminui o padding no mobile */
+    border-radius: 20px 20px 0 0;
+    margin-top: -1.5rem;
+    position: relative;
+    z-index: 8;
   }
 
   .plans-main-heading {
     font-size: 2rem;
-    /* Diminui a fonte do título principal */
-    margin-bottom: 40px;
+    margin-top: 0;
+  }
+  .plans-main-heading {
+    margin-bottom: 2rem;
   }
 
   .plan-card {
@@ -1399,6 +1407,11 @@ button.ghost2:hover {
 /* ======================================================= */
 @media (max-width: 768px) {
 
+
+  .orcamento-container {
+    padding: 20px 5%;
+  }
+
   git
   .budget-panel__content {
     flex-direction: column;
@@ -1412,8 +1425,9 @@ button.ghost2:hover {
   .budget-panel__text {
     flex: 1;
     justify-content: center;
-    /* Centraliza o conteúdo da home no mobile */
-  }
+    align-items: center;
+    padding: 20px 5%;
+    }
 
   #form-panel .budget-panel__text {
     justify-content: flex-start;
@@ -1609,12 +1623,14 @@ button.ghost2:hover {
   /* Ajustes na seção Footer */
   .footer {
     border-radius: 20px;
-    padding: 40px 5%;
+    padding-top: 25rem;
+    margin: -27rem 0 1.5rem 0;
   }
 
   .footer-grid {
     text-align: center;
     gap: 30px;
+    padding: 20px 5%;
     margin-bottom: 50px;
   }
 

@@ -15,7 +15,7 @@
 :root {
   --bg-color: rgba(255, 255, 255, 0.9);
   --black-color: rgba(40, 40, 40, 0.9);
-  --dourado-color: rgba(201, 169, 100, 0.90);
+  --dourado-color: rgba(201, 169, 100, 0.9);
   --bg-dark-primary: #1a1a1a;
   --bg-dark-secondary: #282828;
   --text-light: #f0f0f0;
@@ -365,7 +365,7 @@ header .imagem-logo {
   /* Foto ocupa toda a largura do container no mobile */
   height: auto;
   /* Altura se ajusta para manter a proporção */
-  border-radius: 16px;
+  border-radius: 20px;
   /* Bordas arredondadas como na imagem */
   display: block;
   /* Remove qualquer espaço extra que a tag img possa ter */
@@ -419,20 +419,14 @@ header .imagem-logo {
 
 .about__text .cta-button {
   display: inline-flex;
-  /* Permite alinhar texto e ícone lado a lado */
   align-items: center;
   gap: 0.5rem;
-  /* Espaço entre o texto "Saiba mais" e a seta */
 
   background-color: var(--dourado-color);
-  /* Cor de fundo do botão */
   color: var(--black-color);
-  /* Cor do texto do botão */
 
   padding: 0.8rem 1.5rem;
-  /* Espaçamento interno do botão */
   border-radius: 30px;
-  /* Formato de pílula */
   font-weight: 600;
   text-decoration: none;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -468,7 +462,6 @@ header .imagem-logo {
     background-color: #1F2937;
     color: var(--bg-color);
     position: relative;
-    /* Necessário para que o z-index funcione */
     z-index: 7;
     margin: -6rem 3rem 3rem 3rem;
     border-radius: 20px;
@@ -572,7 +565,7 @@ header .imagem-logo {
 
   .portfolio-section {
     overflow: hidden;
-    border-radius: 30px 30px 0 0;
+    border-radius: 20px 20px 0 0;
     position: relative;
     z-index: 8;
     margin-top: -1.5rem;
@@ -812,7 +805,7 @@ header .imagem-logo {
   color: var(--black-color);
   padding: 60px 20px;
   text-align: center;
-  border-radius: 30px 30px 0 0;
+  border-radius: 20px 20px 0 0;
   margin: -1.5rem 0 0 0;
   /* Ajusta a margem para sobrepor o fundo */
   position: relative;
@@ -868,7 +861,7 @@ header .imagem-logo {
 }
 
 .imagem {
-  border-radius: 30px;
+  border-radius: 20px;
   object-fit: cover;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
@@ -879,7 +872,7 @@ header .imagem-logo {
   color: #FFF;
   /* Use var(--bg-color) se tiver definido */
   padding: 40px 25px;
-  border-radius: 30px;
+  border-radius: 20px;
   text-align: left;
   min-height: 220px;
   display: flex;
@@ -915,7 +908,7 @@ header .imagem-logo {
   font-weight: 500;
   font-size: 0.9rem;
   padding: 8px 20px;
-  border-radius: 30px;
+  border-radius: 20px;
   align-self: flex-start;
   /* Alinha o próprio botão à esquerda */
   transition: all 0.3s ease;
@@ -987,7 +980,7 @@ header .imagem-logo {
   margin-top: 3rem;
   text-align: center;
   max-width: 800px;
-  /* Evita que o título fique largo demais */
+  margin-bottom: 2rem;
 }
 
 .plans-container {
@@ -1004,7 +997,7 @@ header .imagem-logo {
   /* REMOVEMOS A ALTURA FIXA! A altura agora será automática */
   /* height: 570px; */
   background-color: #3E3E3E;
-  border-radius: 30px;
+  border-radius: 20px;
   padding: 30px;
   display: flex;
   flex-direction: column;
@@ -1033,7 +1026,7 @@ header .imagem-logo {
   background-color: var(--dourado-color, #c9a964);
   color: #1F2937;
   padding: 8px 15px;
-  border-radius: 30px;
+  border-radius: 20px;
   font-size: 0.85rem;
   font-weight: bold;
   text-transform: uppercase;
@@ -1043,7 +1036,7 @@ header .imagem-logo {
   font-size: 1.8rem;
   color: #FFFFFF;
   margin-bottom: 25px;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .features-list {
@@ -1081,7 +1074,7 @@ header .imagem-logo {
 .plan-price {
   font-size: 2rem;
   color: #FFFFFF;
-  font-weight: bold;
+  font-weight: 400;
   margin-bottom: 10px;
 }
 
@@ -1172,7 +1165,7 @@ header .imagem-logo {
 
 .orcamento-container {
   height: 100svh;
-  border-radius: 30px;
+  border-radius: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1256,37 +1249,26 @@ header .imagem-logo {
   margin: 0 0 30px 0;
 }
 
-.estatisticas {
-  display: flex;
-  gap: 30px;
-  margin-top: 40px;
-}
-
-.stat-itemV2 {
-  display: flex;
-  flex-direction: column;
-}
-
-.stat-itemV2 strong {
-  font-size: 4rem;
-  font-weight: 400;
-}
-
-.stat-itemV2 span {
-  font-size: 1rem;
-  font-weight: 300;
-  max-width: 120px;
+.budget-panel__text .tag {
+  display: inline-block;
+  background-color: var(--dourado-color);
+  color: #333333;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
 }
 
 /* --- BOTÕES --- */
 button.ghost2 {
-  background-color: transparent;
-  border: 2px solid var(--dourado-color);
-  color: var(--dourado-color);
+  background-color: var(--dourado-color);
+  border: none;
+  color: var(--black-color);
   border-radius: 30px;
-  padding: 12px 35px;
+  padding: 0.8rem 1.5rem;
   font-size: 0.9rem;
-  font-weight: 700;
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
   cursor: pointer;
@@ -1295,9 +1277,10 @@ button.ghost2 {
 
 button.ghost1 {
   background-color: transparent;
-  border: 1px solid var(--dourado-color);
-  color: var(--dourado-color);
-  border-radius: 30px;
+  border: none;
+  background-color: var(--dourado-color);
+  color: #212121;
+  border-radius: 20px;
   padding: 6px 20px;
   font-size: 0.8rem;
   font-weight: 400;
@@ -1352,7 +1335,7 @@ button.ghost2:hover {
   padding: 12px 15px;
   background: rgba(0, 0, 0, 0.3);
   border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 30px;
+  border-radius: 20px;
   color: #fff;
   font-size: 0.95rem;
   font-family: 'Poppins', sans-serif;
@@ -1374,13 +1357,14 @@ button.ghost2:hover {
   margin-bottom: 10px;
   font-weight: 500;
   text-align: left;
+  flex-wrap: nowrap;
 }
 
 .checkbox-group {
   display: flex;
   gap: 20px;
   justify-content: flex-start;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 .checkbox-group label {
@@ -1402,7 +1386,7 @@ button.ghost2:hover {
   padding: 15px;
   border-radius: 30px;
   border: none;
-  background-color: #f5f5f5;
+  background-color: var(--dourado-color);
   color: #121212;
   font-size: 1rem;
   font-weight: 700;
@@ -1427,7 +1411,7 @@ button.ghost2:hover {
   .budget-panel__content {
     flex-direction: column;
     gap: 2rem;
-    
+
   }
 
   .budget-panel__photo {
@@ -1439,7 +1423,7 @@ button.ghost2:hover {
     flex: 1;
     justify-content: center;
     align-items: center;
-    padding: 20px 5%;
+    padding: 0 5%;
   }
 
   .orcamento-img {
@@ -1449,7 +1433,7 @@ button.ghost2:hover {
     /* Ocupa toda a largura disponível */
     height: auto;
     /* Mantém a proporção correta da imagem */
-    border-radius: 16px;
+    border-radius: 20px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   }
 
@@ -1461,19 +1445,22 @@ button.ghost2:hover {
   }
 
   .budget-panel__text {
-        padding: 20px; /* Removemos o padding antigo para um controle mais fino */
-        align-items: flex-start; /* <<< ALINHA TUDO À ESQUERDA */
-        text-align: left;        /* <<< ALINHA O TEXTO À ESQUERDA */
-        color: var(--black-color); /* Muda a cor do texto para escuro */
-    }
-    
+    /* Removemos o padding antigo para um controle mais fino */
+    align-items: flex-start;
+    /* <<< ALINHA TUDO À ESQUERDA */
+    text-align: left;
+    /* <<< ALINHA O TEXTO À ESQUERDA */
+    color: var(--black-color);
+    /* Muda a cor do texto para escuro */
+  }
+
 
   .budget-panel__text h1 {
     font-size: 2rem;
   }
 
   .budget-panel__text h2 {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
 
   .estatisticas {
@@ -1503,13 +1490,13 @@ button.ghost2:hover {
 .footer {
   background-color: #0F0F0F;
   color: var(--white-color);
-  border-radius: 30px;
+  border-radius: 20px;
   padding: 60px 5%;
   position: relative;
   margin: -28rem 1.5rem 1.5rem 1.5rem;
   padding-top: 27rem;
   border-radius: 20px 20px 0 0;
-  border-radius: 30px;
+  border-radius: 20px;
 }
 
 .footer-grid {

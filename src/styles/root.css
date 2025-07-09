@@ -469,7 +469,7 @@ header .imagem-logo {
     color: var(--bg-color);
     position: relative;
     /* Necessário para que o z-index funcione */
-    z-index: 5;
+    z-index: 7;
     margin: -6rem 3rem 3rem 3rem;
     border-radius: 20px;
 
@@ -1139,6 +1139,7 @@ header .imagem-logo {
     font-size: 2rem;
     margin-top: 0;
   }
+
   .plans-main-heading {
     margin-bottom: 2rem;
   }
@@ -1204,6 +1205,7 @@ header .imagem-logo {
   display: flex;
   width: 100%;
   height: 100%;
+  background-color: #EAEAEA;
 }
 
 .budget-panel__photo {
@@ -1216,16 +1218,22 @@ header .imagem-logo {
   background-image: url("../assets/images/img-orçamento.png");
 }
 
+.orcamento-img {
+  display: none;
+}
+
 .budget-panel__text {
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   padding: 40px;
-  text-align: center;
-  color: white;
+  color: var(--black-color);
   position: relative;
+
+  align-items: flex-start;
+  /* Alinha todo o conteúdo de texto à esquerda */
+  text-align: left;
 }
 
 .budget-panel__text h1 {
@@ -1302,6 +1310,7 @@ button.ghost1:hover {
   background-color: var(--dourado-color);
   color: #121212;
 }
+
 button.ghost2:hover {
   background-color: var(--dourado-color);
   color: #121212;
@@ -1409,12 +1418,16 @@ button.ghost2:hover {
 
 
   .orcamento-container {
-    padding: 20px 5%;
+    padding: 0;
+    height: auto;
+    min-height: 100svh;
+    padding: 4rem 0;
   }
 
-  git
   .budget-panel__content {
     flex-direction: column;
+    gap: 2rem;
+    
   }
 
   .budget-panel__photo {
@@ -1427,7 +1440,18 @@ button.ghost2:hover {
     justify-content: center;
     align-items: center;
     padding: 20px 5%;
-    }
+  }
+
+  .orcamento-img {
+    display: block;
+    /* A imagem se torna visível */
+    width: 100%;
+    /* Ocupa toda a largura disponível */
+    height: auto;
+    /* Mantém a proporção correta da imagem */
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  }
 
   #form-panel .budget-panel__text {
     justify-content: flex-start;
@@ -1435,6 +1459,14 @@ button.ghost2:hover {
     padding: 20px;
     overflow-y: auto;
   }
+
+  .budget-panel__text {
+        padding: 20px; /* Removemos o padding antigo para um controle mais fino */
+        align-items: flex-start; /* <<< ALINHA TUDO À ESQUERDA */
+        text-align: left;        /* <<< ALINHA O TEXTO À ESQUERDA */
+        color: var(--black-color); /* Muda a cor do texto para escuro */
+    }
+    
 
   .budget-panel__text h1 {
     font-size: 2rem;

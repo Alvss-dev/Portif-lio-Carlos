@@ -796,6 +796,47 @@ header .imagem-logo {
   font-size: 1.5rem;
 }
 
+/* --- INÍCIO DA ADAPTAÇÃO PARA MOBILE --- */
+@media (max-width: 768px) {
+  .carousel-hover {
+    /* Transforma o layout de linha para coluna */
+    flex-direction: column;
+    /* Permite que o conteúdo cresça e seja rolável */
+    height: auto;
+    overflow: visible;
+  }
+
+  .hover-item {
+    /* Cada item agora ocupa uma altura mínima para ser bem visível */
+    min-height: 50vh;
+    /* Reseta a propriedade flex para garantir que todos tenham a mesma "largura" (agora altura) */
+    flex: 1;
+    /* Remove os raios da borda que não fazem mais sentido */
+    border-radius: 0 !important;
+  }
+
+  /* Desativa o efeito de expansão, pois não há "hover" no mobile */
+  .hover-item:hover {
+    flex: 1;
+  }
+
+  /* Define tamanhos de fonte fixos e legíveis para mobile */
+  .hover-item h2,
+  .hover-item:hover h2 {
+    font-size: 2.2rem;
+  }
+
+  .hover-item h3,
+  .hover-item:hover h3 {
+    font-size: 1.3rem;
+  }
+
+  /* Remove o blur que pode ser pesado para o processamento em celulares */
+  .hover-item::before {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+}
 
 /*TELA 4 - PROCESSO ------------------*/
 

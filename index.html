@@ -7,29 +7,84 @@
     <title>Carlos I. Rios</title>
     <link rel="stylesheet" href="src/styles/root.css">
     <link rel="icon" href="src/assets/images/logo.Carlos.png" type="image/x-icon" style=" filter: invert(100%);">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* A fonte "Space Grotesk" precisa ser importada para corresponder ao design original */
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap');
+
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        /* Estilização para a transição do ícone do menu (hambúrguer) */
+        #mobile-menu-button.active #line1 {
+            transform: translateY(6px) rotate(45deg);
+        }
+
+        #mobile-menu-button.active #line2 {
+            opacity: 0;
+        }
+
+        #mobile-menu-button.active #line3 {
+            transform: translateY(-6px) rotate(-45deg);
+        }
+    </style>
 </head>
 
-<body>
+<body class="bg-black text-white">
+    <nav id="navbar" class="fixed top-0 left-0 right-0 bg-stone-50/10 backdrop-blur-lg  z-50 transition-all duration-300">
+        <div class=" px-6 py-3">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <div class="relative mr-2">
+                        <div class="w-20 h-10 rounded-md flex items-center justify-center relative">
+                            <div class="absolute inset-[3px]  rounded-[4px] flex items-center justify-center overflow-hidden">
+                                <div><img src="src/assets/images/logo.Carlos.png"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-xl font-medium bg-gradient-to-r to-purple-400 bg-clip-text text-transparent flex items-center">
+                        CarlosR.
+                    </div>
+                </div>
+
+                <div class="hidden md:flex items-center space-x-1">
+                    <a href="#home" class="nav-link text-gray-300 hover:text-gray-900 px-4 py-2 rounded-md transition-colors duration-200">Home</a>
+                    <a href="#about" class="nav-link text-gray-300 hover:text-gray-900 px-4 py-2 rounded-md transition-colors duration-200">Sobre</a>
+                    <a href="#services" class="nav-link text-gray-300 hover:text-gray-900 px-4 py-2 rounded-md transition-colors duration-200">Portfólio</a>
+                    <a href="#portfolio" class="nav-link text-gray-300 hover:text-gray-900 px-4 py-2 rounded-md transition-colors duration-200">Planos</a>
+                    <a href="#contact" class="nav-link text-gray-300 hover:text-gray-900 px-4 py-2 rounded-md transition-colors duration-200">Orçameto</a>
+                    
+                </div>
+
+                <div class="flex md:hidden">
+                    <button id="mobile-menu-button" class="relative w-10 h-10 focus:outline-none group" aria-label="Toggle menu">
+                        <div class="absolute w-5 transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2">
+                            <span class="block h-0.5 w-5 bg-stone-50 mb-1 transform transition duration-300 ease-in-out" id="line1"></span>
+                            <span class="block h-0.5 w-5 bg-stone-50 mb-1 transform transition duration-300 ease-in-out" id="line2"></span>
+                            <span class="block h-0.5 w-5 bg-stone-50 transform transition duration-300 ease-in-out" id="line3"></span>
+                        </div>
+                    </button>
+                </div>
+            </div>
+
+            <div id="mobile-menu" class="md:hidden h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                <div class="pt-2 pb-4 space-y-1">
+                    <a href="#home" class="mobile-nav-link block text-gray-300 hover:text-gray-900 hover:bg-stone-50/50 px-4 py-2 rounded-md transition-colors duration-200">Home</a>
+                    <a href="#about" class="mobile-nav-link block text-gray-300 hover:text-gray-900 hover:bg-stone-50/50 px-4 py-2 rounded-md transition-colors duration-200">Sobre</a>
+                    <a href="#services" class="mobile-nav-link block text-gray-300 hover:text-gray-900 hover:bg-stone-50/50 px-4 py-2 rounded-md transition-colors duration-200">portfólio</a>
+                    <a href="#portfolio" class="mobile-nav-link block text-gray-300 hover:text-gray-900 hover:bg-stone-50/50 px-4 py-2 rounded-md transition-colors duration-200">Planos</a>
+                    <a href="#contact" class="mobile-nav-link block text-gray-300 hover:text-gray-900 hover:bg-stone-50/50 px-4 py-2 rounded-md transition-colors duration-200">Orçamento</a>
+                    
+                </div>
+            </div>
+        </div>
+    </nav>
 
     <!-- ---------------------TELA 1 --------------------- -->
     <section class="hero">
         <div class="hero-wrapper">
-            <header>
-                <img class="imagem-logo" src="src/assets/images/logo.Carlos.png" alt="logo do site">
-
-                <nav class="desktop-nav">
-                    <a href="#home">Home</a>
-                    <a href="#sobre-carlos">Sobre</a>
-                    <a href="#carrossel">Portfólio</a>
-                    <a href="#planos">Planos</a>
-                    <a href="#orcamento-botao">Orçamento</a>
-                </nav>
-
-                <button class="menu-toggle-btn" id="menu-toggle">
-                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTQgNkgyME00IDEySDIwTTQgMThIMjAiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+Cjwvc3ZnPgo="
-                        alt="Abrir Menu">
-                </button>
-            </header>
+            
 
             <main class="hero-section">
                 <aside class="hero-content">
@@ -385,6 +440,28 @@
             </div>
         </footer>
     </div>
+
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navbar = document.getElementById('navbar');
+
+        mobileMenuButton.addEventListener('click', () => {
+            const menuHeight = mobileMenu.scrollHeight;
+            mobileMenuButton.classList.toggle('active');
+            
+            if (mobileMenu.classList.contains('h-0')) {
+                mobileMenu.classList.remove('h-0', 'overflow-hidden');
+                mobileMenu.style.height = menuHeight + 'px';
+            } else {
+                mobileMenu.style.height = mobileMenu.scrollHeight + 'px'; 
+                setTimeout(() => {
+                    mobileMenu.classList.add('h-0', 'overflow-hidden');
+                    mobileMenu.style.height = '';
+                }, 300); // tempo de 300ms corresponde à transição CSS
+            }
+        });
+    </script>
 
     <!-- ------------------------------------ -->
     <script src="src/scripts/script.js"></script>
